@@ -94,18 +94,20 @@
   </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="hero min-h-screen relative overflow-hidden">
-    <!-- Background image with parallax -->
-    <div id="heroBackground" class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110" style="background-image: url('images/banner.jpg'); will-change: transform; -webkit-backface-visibility: hidden;"></div>
-    <!-- Dark overlay for text readability -->
+  <section id="home" class="hero min-h-screen relative">
+    <!-- Background wrapper with overflow hidden for parallax -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div id="heroBackground" class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110" style="background-image: url('images/banner.jpg');"></div>
+    </div>
+    <!-- Dark overlay for text readability (separate layer) -->
     <div class="absolute inset-0 bg-black/60"></div>
 
-    <div class="hero-content text-center relative z-10 py-20 px-4">
+    <div class="hero-content text-center relative z-10 py-20 px-4 isolate">
       <div class="max-w-4xl mx-auto">
         <!-- Logo -->
         <div class="mb-8">
-          <div class="w-64 sm:w-72 md:w-96 mx-auto logo-glow rounded-xl overflow-hidden">
-            <img src="images/logo.png" alt="B&M's Garage Logo" class="w-full h-auto">
+          <div class="w-64 sm:w-72 md:w-96 mx-auto">
+            <img src="images/logo.png" alt="B&M's Garage Logo" class="w-full h-auto logo-glow">
           </div>
         </div>
 
