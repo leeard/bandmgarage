@@ -7,9 +7,11 @@
 
 | ID | Time | T | Title | Read |
 |----|------|---|-------|------|
+| #725 | 9:03 PM | 🔵 | Identified dimensions of new family photo image | ~245 |
+| #723 | 9:01 PM | 🟣 | Cox Family Photo Added to About Section | ~317 |
+| #670 | 7:58 PM | ✅ | Logo image converted from JPEG to PNG format | ~269 |
 | #666 | 7:56 PM | 🔵 | PNG logo variant discovered in B&M Garage website images | ~292 |
 | #663 | 7:55 PM | 🟣 | User requests transparent background for logo image | ~267 |
 | #658 | 7:53 PM | 🔵 | Facebook-optimized logo variant present in B&M Garage website | ~266 |
-| #636 | 7:35 PM | 🟣 | B&M Garage channel banner downloaded for hero section | ~177 |
-| #634 | " | 🟣 | B&M Garage logo downloaded to images directory | ~189 |
+| #634 | 7:35 PM | 🟣 | B&M Garage logo downloaded to images directory | ~189 |
 </claude-mem-context>
