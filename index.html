@@ -3,30 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B&M's Garage | Devoted to Fixing Anything Moving</title>
-  <meta name="description" content="B&M's Garage - Devoted to fixing anything moving! DIY repairs, automotive projects, and family fun.">
+  <title>B&M's Garage | Devoted to Fixing Anything Moving!</title>
+  <meta name="description" content="Ben, Murrie & the crew — wrenching, welding, and fixing whatever's broken this week in Payson, Utah. Weekly videos on YouTube since 2014. A lifetime of fixin'!">
 
   <!-- Open Graph / Social Preview -->
-  <meta property="og:title" content="B&M's Garage">
-  <meta property="og:description" content="Devoted to fixing anything moving! DIY repairs, automotive projects, and family fun.">
-  <meta property="og:image" content="images/logo.png">
-  <meta property="og:url" content="https://bmsgarage.com">
+  <meta property="og:title" content="B&M's Garage — Devoted to Fixing Anything Moving!">
+  <meta property="og:description" content="Ben, Murrie & the crew — wrenching, welding, and fixing whatever's broken this week in Payson, Utah. On YouTube since 2014.">
+  <meta property="og:image" content="https://leeard.github.io/bandmgarage/images/banner-full.jpg">
+  <meta property="og:url" content="https://leeard.github.io/bandmgarage/">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="B&M's Garage">
-  <meta name="twitter:description" content="Devoted to fixing anything moving! DIY repairs, automotive projects, and family fun.">
-  <meta name="twitter:image" content="images/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="B&M's Garage — Devoted to Fixing Anything Moving!">
+  <meta name="twitter:description" content="Ben, Murrie & the crew — wrenching, welding, and fixing whatever's broken this week in Payson, Utah. On YouTube since 2014.">
+  <meta name="twitter:image" content="https://leeard.github.io/bandmgarage/images/banner-full.jpg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/logo-yt.jpg">
 
+  <!-- Fonts (loaded via <link>, never CSS @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700;1,800&family=Barlow:wght@400;500;700&family=Barlow+Condensed:wght@600;700&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Hero image: highest fetch priority -->
+  <link rel="preload" as="image" href="images/banner-full.jpg" fetchpriority="high">
+
   <!-- Tailwind/DaisyUI CSS -->
   <link href="dist/output.css" rel="stylesheet">
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Set theme before page renders to prevent flash -->
   <script>
@@ -48,410 +53,747 @@
 </head>
 <body class="bg-base-100 text-base-content bg-noise">
 
+  <a href="#main" class="sr-only focus:not-sr-only fixed top-2 left-2 z-[60] btn btn-primary btn-sm">Skip to content</a>
+
+  <!-- Inline SVG icon sprite (replaces the Font Awesome CDN request) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+    <defs>
+      <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-theme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.2C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-tiktok" viewBox="0 0 24 24" fill="currentColor"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.55-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z"/></symbol>
+      <symbol id="i-hexnut" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 2.5 20.23 7.25v9.5L12 21.5 3.77 16.75v-9.5z"/><circle cx="12" cy="12" r="3.5"/></symbol>
+      <symbol id="i-zap" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 11-14h-7l1-6z"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    </defs>
+  </svg>
+
   <!-- Navbar -->
-  <nav class="navbar bg-base-200/95 backdrop-blur-sm fixed top-0 z-50 shadow-lg">
+  <nav class="navbar min-h-0 h-14 bg-base-200/95 backdrop-blur-sm fixed top-0 z-50" style="border-bottom:1px solid var(--steel);">
     <div class="navbar-start">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-200 rounded-box w-52">
+        <button type="button" id="navMenuBtn" class="btn btn-ghost btn-sm h-11 min-h-11 lg:hidden" aria-label="Open menu" aria-haspopup="true" aria-expanded="false">
+          <svg class="h-5 w-5" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+        <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 shadow-lg bg-base-200 rounded-box w-52">
           <li><a href="#home" class="nav-link">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#latest" class="nav-link">Latest</a></li>
           <li><a href="#videos" class="nav-link">Videos</a></li>
           <li><a href="#shorts" class="nav-link">Shorts</a></li>
+          <li><a href="#deals" class="nav-link">Deals</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </div>
-      <a href="#home" class="btn btn-ghost text-xl font-teko text-primary">
-        B&M's GARAGE
+      <a href="#home" class="btn btn-ghost btn-sm px-2 gap-2">
+        <img src="images/logo.png" alt="B&M's Garage badge" class="h-9 w-auto">
+        <span class="hidden sm:inline font-teko text-lg normal-case">B<span class="text-secondary">&</span>M's GARAGE</span>
       </a>
     </div>
     <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1 gap-2">
-        <li><a href="#home" class="nav-link font-medium">Home</a></li>
-        <li><a href="#about" class="nav-link font-medium">About</a></li>
-        <li><a href="#videos" class="nav-link font-medium">Videos</a></li>
-        <li><a href="#shorts" class="nav-link font-medium">Shorts</a></li>
-        <li><a href="#contact" class="nav-link font-medium">Contact</a></li>
+      <ul class="menu menu-horizontal px-1 gap-1">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#latest" class="nav-link">Latest</a></li>
+        <li><a href="#videos" class="nav-link">Videos</a></li>
+        <li><a href="#shorts" class="nav-link">Shorts</a></li>
+        <li><a href="#deals" class="nav-link">Deals</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
     </div>
     <div class="navbar-end gap-2">
       <div class="dropdown dropdown-end">
-        <div tabindex="0" role="button" class="btn btn-sm btn-ghost gap-1">
-          <i class="fas fa-circle-half-stroke"></i>
+        <button type="button" id="themeToggleBtn" class="btn btn-sm h-11 min-h-11 btn-ghost gap-1" aria-label="Theme" aria-haspopup="true" aria-expanded="false">
+          <svg class="w-4 h-4" aria-hidden="true"><use href="#i-theme"/></svg>
           <span class="hidden sm:inline text-xs">Theme</span>
-          <i class="fas fa-chevron-down text-xs"></i>
-        </div>
+          <svg class="w-3 h-3" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+        </button>
         <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow-lg bg-base-200 rounded-box w-36 mt-2">
-          <li><button type="button" id="themeDark" class="w-full text-left"><i class="fas fa-moon"></i> Dark</button></li>
-          <li><button type="button" id="themeLight" class="w-full text-left"><i class="fas fa-sun"></i> Light</button></li>
+          <li><button type="button" id="themeDark" class="w-full text-left flex items-center gap-2" aria-pressed="false"><svg class="w-4 h-4" aria-hidden="true"><use href="#i-moon"/></svg> Dark</button></li>
+          <li><button type="button" id="themeLight" class="w-full text-left flex items-center gap-2" aria-pressed="false"><svg class="w-4 h-4" aria-hidden="true"><use href="#i-sun"/></svg> Light</button></li>
         </ul>
       </div>
+      <a href="https://www.youtube.com/@bandmsgarage?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="btn btn-sm h-11 min-h-11 btn-yt gap-2" aria-label="Subscribe on YouTube">
+        <svg class="w-4 h-4" aria-hidden="true"><use href="#i-youtube"/></svg>
+        <span class="hidden xs:inline">Subscribe</span>
+      </a>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero min-h-screen relative">
+  <main id="main">
+
+  <!-- Hero Section: the family, not the truck -->
+  <section id="home" class="min-h-svh relative">
     <!-- Background wrapper with overflow hidden for parallax -->
     <div class="absolute inset-0 overflow-hidden">
-      <div id="heroBackground" class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110" style="background-image: url('images/banner.jpg');"></div>
+      <div id="heroBackground" class="hero-bg absolute inset-0 bg-cover bg-no-repeat"></div>
     </div>
-    <!-- Dark overlay for text readability (separate layer) -->
-    <div class="absolute inset-0 bg-black/60"></div>
+    <!-- Gradient scrim: content lives in the lower third, faces stay clear -->
+    <div class="absolute inset-0 hero-scrim"></div>
 
-    <div class="hero-content text-center relative z-10 py-20 px-4 isolate">
-      <div class="max-w-4xl mx-auto">
-        <!-- Logo -->
-        <div class="mb-8">
-          <div class="w-64 sm:w-72 md:w-96 mx-auto">
-            <img src="images/logo.png" alt="B&M's Garage Logo" class="w-full h-auto logo-glow">
-          </div>
-        </div>
-
-        <h1 class="text-6xl md:text-8xl mb-6 font-teko text-primary drop-shadow-lg hero-title">
-          B&M's GARAGE
+    <div class="relative z-10 min-h-svh flex items-end justify-center px-4" style="padding-bottom: calc(3rem + env(safe-area-inset-bottom));">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="hero-rise hero-rise-1 font-teko uppercase text-white leading-none mb-3" style="font-size: clamp(2.25rem, 6vw, 4.5rem);">
+          <span class="sr-only">B&amp;M's Garage — </span>DEVOTED TO FIXING <span class="text-shop-lime">ANYTHING</span> MOVING!
         </h1>
 
-        <p class="text-xl md:text-2xl text-white/90 mb-4 max-w-2xl mx-auto drop-shadow-md">
-          <span class="font-bold text-primary">Devoted to fixing anything moving!</span>
+        <p class="hero-rise hero-rise-2 sm:hidden text-white/85 font-medium text-base mb-6 max-w-2xl mx-auto">
+          Ben, Murrie <span class="text-badge-kelly font-bold">&amp;</span> the crew — Payson, Utah. On YouTube since 2014.
         </p>
-        <p class="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto drop-shadow-md">
-          Sharing our knowledge with family and friends with hope that we can solve issues by working together.
+        <p class="hero-rise hero-rise-2 hidden sm:block text-white/85 font-medium text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          Ben, Murrie <span class="text-badge-kelly font-bold">&amp;</span> the crew — wrenching, welding, and fixing whatever's broken this week in Payson, Utah. On YouTube since 2014.
         </p>
 
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a href="https://www.youtube.com/@bandmsgarage?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="btn btn-lg gap-2 bg-red-600 hover:bg-red-700 text-white border-none">
-            <i class="fab fa-youtube text-xl"></i>
-            Subscribe on YouTube
+        <div class="hero-rise hero-rise-3 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://www.youtube.com/@bandmsgarage?sub_confirmation=1" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-yt gap-2 w-full sm:w-auto">
+            <svg class="w-6 h-6" aria-hidden="true"><use href="#i-youtube"/></svg>
+            SUBSCRIBE ON YOUTUBE
+          </a>
+          <a href="#latest" class="btn btn-lg btn-chrome gap-2 w-full sm:w-auto">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-play"/></svg>
+            WATCH THE LATEST
           </a>
         </div>
       </div>
     </div>
 
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <a href="#about" class="text-base-content/50 hover:text-primary transition-colors">
-        <i class="fas fa-chevron-down text-2xl"></i>
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce z-10">
+      <a href="#latest" class="text-white/60 hover:text-shop-lime transition-colors" aria-label="Scroll to the latest video">
+        <svg class="w-7 h-7" aria-hidden="true"><use href="#i-chevron-down"/></svg>
       </a>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 bg-base-200 reveal">
+  <!-- Stat strip -->
+  <section class="py-10 bg-base-200" style="border-top:1px solid var(--steel); border-bottom:1px solid var(--steel);">
     <div class="container mx-auto px-4">
-      <h2 class="section-title">About <span class="text-primary">Us</span></h2>
-
-      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-        <!-- Family Photo -->
-        <div class="relative">
-          <div class="rounded-2xl bg-base-300 overflow-hidden shadow-2xl">
-            <img src="images/family-cropped.jpg"
-                 alt="The Cox Family"
-                 class="w-full h-auto object-cover">
-          </div>
-          <!-- Decorative elements -->
-          <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl"></div>
-          <div class="absolute -top-4 -left-4 w-32 h-32 bg-accent/20 rounded-full blur-2xl"></div>
+      <div id="stat-strip" class="grid grid-cols-1 min-[400px]:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div class="stat-well p-5 text-center">
+          <svg class="w-5 h-5 mx-auto mb-2 text-primary" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          <div id="stat-subscribers" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="69600" data-format="k" data-suffix="+">69.6K+</div>
+          <div class="label-condensed text-base-content/60 mt-1">Subscribers</div>
         </div>
-
-        <div class="space-y-6">
-          <h3 class="text-2xl font-bold">Hey, we're B&M's Garage!</h3>
-          <p class="text-lg text-base-content/80 leading-relaxed">
-            We're devoted to fixing anything moving! From automotive repairs to off-road projects, we share our knowledge with family and friends with the hope that we can solve issues by working together.
-          </p>
-          <p class="text-lg text-base-content/80 leading-relaxed">
-            Whether it's engines, trucks, buggies, or whatever else needs fixin' - we're on it. Join us for DIY projects, tips, and a whole lot of family fun in the garage!
-          </p>
-          <p class="text-lg text-base-content/80 leading-relaxed font-semibold text-primary">
-            A lifetime of fixin'!
-          </p>
-
-          <!-- Stats -->
-          <div class="stats stats-vertical sm:stats-horizontal shadow-lg bg-base-100 mt-8">
-            <div class="stat">
-              <div class="stat-figure text-primary">
-                <i class="fab fa-youtube text-3xl"></i>
-              </div>
-              <div class="stat-title">Subscribers</div>
-              <div id="stat-subscribers" class="stat-value text-primary counter" data-target="70400" data-suffix="+" data-format="k">0</div>
-            </div>
-            <div class="stat">
-              <div class="stat-figure text-primary">
-                <i class="fas fa-video text-3xl"></i>
-              </div>
-              <div class="stat-title">Videos</div>
-              <div id="stat-videos" class="stat-value text-primary counter" data-target="240" data-suffix="+">0</div>
-            </div>
-          </div>
+        <div class="stat-well p-5 text-center">
+          <svg class="w-5 h-5 mx-auto mb-2 text-primary" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          <div id="stat-videos" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="264" data-suffix="+">264+</div>
+          <div class="label-condensed text-base-content/60 mt-1">Videos and Countin'</div>
+        </div>
+        <div class="stat-well p-5 text-center">
+          <svg class="w-5 h-5 mx-auto mb-2 text-primary" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          <div id="stat-views" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="7322693" data-format="m" data-suffix="+">7.3M+</div>
+          <div class="label-condensed text-base-content/60 mt-1">Total Views</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Videos Section -->
-  <section id="videos" class="py-20 bg-base-100 reveal">
+  <!-- Latest Video (featured facade player) -->
+  <section id="latest" class="py-20 bg-base-100 reveal">
     <div class="container mx-auto px-4">
-      <h2 class="section-title">Featured <span class="text-primary">Videos</span></h2>
-      <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-        Check out some of our latest projects and builds!
-      </p>
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Fresh Out of the Shop</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          THE LATEST VIDEO
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
+      </div>
+      <div id="latest-container" class="max-w-6xl mx-auto"></div>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto stagger-children">
-
-        <!-- Video Card 1 -->
-        <a href="#" data-video="SefHfJplQJA" class="video-card video-lightbox">
-          <figure class="relative">
-            <img src="https://img.youtube.com/vi/SefHfJplQJA/hqdefault.jpg"
-                 alt="Motor in Now WHAT"
-                 class="w-full aspect-video object-cover bg-base-300"
-                 onerror="this.src='https://img.youtube.com/vi/SefHfJplQJA/mqdefault.jpg'">
-            <div class="play-overlay absolute inset-0 bg-black/50 flex items-center justify-center">
-              <div class="btn btn-circle btn-primary btn-lg">
-                <i class="fas fa-play text-xl"></i>
-              </div>
-            </div>
-            <div class="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-sm font-mono font-bold"><i class="fas fa-play text-xs mr-1"></i>13:57</div>
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title text-lg">Motor in Now WHAT</h3>
-            <p class="text-base-content/70 text-sm">Ben and the boys getting after it with engine work and buggy progress!</p>
-          </div>
-        </a>
-
-        <!-- Video Card 2 -->
-        <a href="#" data-video="9M8NPCcNUYw" class="video-card video-lightbox">
-          <figure class="relative">
-            <img src="https://img.youtube.com/vi/9M8NPCcNUYw/hqdefault.jpg"
-                 alt="Meet Arccaptain TIG205P PRO"
-                 class="w-full aspect-video object-cover bg-base-300"
-                 onerror="this.src='https://img.youtube.com/vi/9M8NPCcNUYw/mqdefault.jpg'">
-            <div class="play-overlay absolute inset-0 bg-black/50 flex items-center justify-center">
-              <div class="btn btn-circle btn-primary btn-lg">
-                <i class="fas fa-play text-xl"></i>
-              </div>
-            </div>
-            <div class="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-sm font-mono font-bold"><i class="fas fa-play text-xs mr-1"></i>25:00</div>
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title text-lg">Meet Arccaptain TIG205P PRO</h3>
-            <p class="text-base-content/70 text-sm">The boys' new best friend for welding projects!</p>
-          </div>
-        </a>
-
-        <!-- Video Card 3 -->
-        <a href="#" data-video="uBe07YWJliM" class="video-card video-lightbox">
-          <figure class="relative">
-            <img src="https://img.youtube.com/vi/uBe07YWJliM/hqdefault.jpg"
-                 alt="Engine BLOCKS and the Doors ROCKS!"
-                 class="w-full aspect-video object-cover bg-base-300"
-                 onerror="this.src='https://img.youtube.com/vi/uBe07YWJliM/mqdefault.jpg'">
-            <div class="play-overlay absolute inset-0 bg-black/50 flex items-center justify-center">
-              <div class="btn btn-circle btn-primary btn-lg">
-                <i class="fas fa-play text-xl"></i>
-              </div>
-            </div>
-            <div class="absolute bottom-2 right-2 bg-black/80 text-white px-2 py-1 rounded text-sm font-mono font-bold"><i class="fas fa-play text-xs mr-1"></i>32:38</div>
-          </figure>
-          <div class="card-body">
-            <h3 class="card-title text-lg">Engine BLOCKS and the Doors ROCKS!</h3>
-            <p class="text-base-content/70 text-sm">Working on engines and making progress on the builds!</p>
-          </div>
-        </a>
-
+  <!-- More Videos -->
+  <section id="videos" class="py-20 bg-base-200 reveal">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Straight Off the Lift</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          MORE FROM THE GARAGE
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
       </div>
 
-      <div class="text-center mt-12">
-        <a href="https://www.youtube.com/@bandmsgarage/videos" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-primary btn-lg gap-2">
-          <i class="fab fa-youtube"></i>
-          View All Videos
-        </a>
+      <div id="videos-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto stagger-children">
+        <!-- Video cards rendered from youtube.json -->
       </div>
     </div>
   </section>
 
   <!-- Shorts Section -->
-  <section id="shorts" class="py-20 bg-base-200 reveal">
+  <section id="shorts" class="py-20 bg-base-100 reveal">
     <div class="container mx-auto px-4">
-      <h2 class="section-title">Latest <span class="text-primary">Shorts</span></h2>
-      <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-        Quick clips, behind-the-scenes, and project highlights
-      </p>
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>60 Seconds or Less</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          QUICK FIXES
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
+      </div>
 
-      <div id="shorts-container" class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory max-w-6xl mx-auto justify-center flex-wrap stagger-children">
-        <!-- Shorts loaded dynamically from shorts.json -->
+      <div id="shorts-container" class="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory max-w-6xl mx-auto stagger-children" style="scroll-padding: 16px;">
+        <!-- Shorts loaded dynamically from youtube.json -->
+      </div>
+
+      <div id="shorts-fallback" class="hidden text-center space-y-6">
+        <p class="font-teko text-2xl md:text-3xl">NEW VIDEOS EVERY WEEK — CATCH US ON YOUTUBE</p>
+        <a href="https://www.youtube.com/@bandmsgarage" target="_blank" rel="noopener noreferrer" class="btn btn-yt gap-2">
+          <svg class="w-5 h-5" aria-hidden="true"><use href="#i-youtube"/></svg>
+          WATCH ON YOUTUBE
+        </a>
       </div>
 
       <div class="text-center mt-8">
         <a href="https://www.youtube.com/@bandmsgarage/shorts" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-primary gap-2">
-          <i class="fab fa-youtube"></i>
+          <svg class="w-5 h-5" aria-hidden="true"><use href="#i-youtube"/></svg>
           View All Shorts
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-base-100 reveal">
+  <!-- Partner Deals -->
+  <section id="deals" class="py-20 bg-base-200 reveal">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-6">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Deals That Keep the Shop Running</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          IT'S ALWAYS SOMETHIN' — SAVE ON IT!
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
+      </div>
+      <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
+        Straight out of our video descriptions. Using these codes supports the channel at no extra cost to you!
+      </p>
 
-        <div class="card bg-gradient-to-br from-primary/10 to-accent/10 shadow-2xl">
-          <div class="card-body text-center py-16">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-              Let's <span class="text-primary">Connect!</span>
-            </h2>
-            <p class="text-lg text-base-content/80 mb-8 max-w-xl mx-auto">
-              Follow us on social media for behind-the-scenes content, project updates, and more!
-            </p>
-
-            <!-- Social Links -->
-            <div class="flex flex-wrap justify-center gap-4 mb-8">
-              <a href="https://www.youtube.com/@bandmsgarage" target="_blank" rel="noopener noreferrer"
-                 class="btn btn-lg gap-3 bg-red-600 hover:bg-red-700 text-white border-none">
-                <i class="fab fa-youtube text-2xl"></i>
-                YouTube
-              </a>
-              <a href="https://www.instagram.com/bandmsgarage" target="_blank" rel="noopener noreferrer"
-                 class="btn btn-lg gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white border-none">
-                <i class="fab fa-instagram text-2xl"></i>
-                Instagram
-              </a>
-              <a href="https://www.tiktok.com/@bms.garage" target="_blank" rel="noopener noreferrer"
-                 class="btn btn-lg gap-3 bg-black hover:bg-gray-900 text-white border-none">
-                <i class="fab fa-tiktok text-2xl"></i>
-                TikTok
-              </a>
-            </div>
-
-            <!-- Location -->
-            <div class="divider">LOCATION</div>
-
-            <p class="text-base-content/70 mb-4 max-w-md mx-auto">
-              <i class="fas fa-map-marker-alt text-primary mr-2"></i>
-              Payson, Utah
-            </p>
-
-            <!-- Business info -->
-            <div class="divider">BUSINESS INQUIRIES</div>
-
-            <p class="text-base-content/70 mb-4">Want to collaborate with B&M's Garage?</p>
-            <p class="text-base-content/60 text-sm">Reach out through our social media channels!</p>
-          </div>
-        </div>
-
+      <div id="deals-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto stagger-children">
+        <!-- Partner cards rendered from the PARTNERS array below -->
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer footer-center p-10 bg-base-200 text-base-content">
-    <aside>
-      <p class="text-2xl font-teko">
-        B&M's GARAGE
-      </p>
-      <p class="text-base-content/70">Devoted to fixing anything moving!</p>
-    </aside>
-    <nav>
-      <div class="grid grid-flow-col gap-6">
-        <a href="https://www.youtube.com/@bandmsgarage" target="_blank" rel="noopener noreferrer" class="social-btn text-2xl" title="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-        <a href="https://www.instagram.com/bandmsgarage" target="_blank" rel="noopener noreferrer" class="social-btn text-2xl" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.tiktok.com/@bms.garage" target="_blank" rel="noopener noreferrer" class="social-btn text-2xl" title="TikTok">
-          <i class="fab fa-tiktok"></i>
-        </a>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-base-100 reveal">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>B <span class="text-secondary">&</span> M = BEN <span class="text-secondary">&</span> MURRIE</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          MEET THE COX CREW
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
       </div>
-    </nav>
-    <aside class="flex flex-col items-center gap-2">
-      <p class="text-base-content/50">&copy; 2026 B&M's Garage. All rights reserved.</p>
-    </aside>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <!-- Family Photo in chrome frame -->
+        <div>
+          <div class="chrome-frame">
+            <img src="images/family-cropped.jpg"
+                 alt="The Cox family"
+                 class="w-full h-auto object-cover rounded-[5px]"
+                 loading="lazy" decoding="async">
+          </div>
+          <div class="text-center -mt-4 relative z-10">
+            <span class="caption-plate">
+              <svg class="w-2.5 h-2.5" aria-hidden="true"><use href="#i-hexnut"/></svg>
+              BEGINNING OF 2025 — PAYSON, UTAH
+              <svg class="w-2.5 h-2.5" aria-hidden="true"><use href="#i-hexnut"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="space-y-5">
+          <p class="text-xl font-medium">HEY! WE'RE THE COX FAMILY — B IS FOR BEN, M IS FOR MURRIE.</p>
+          <p class="text-base-content/80 leading-relaxed">
+            We run a REAL garage in Payson, Utah — B &amp; M's Garage LLC — and since January 2014 we've been pointing a camera at whatever's broken this week. Trucks, buggies, mowers, welders, decks, e-bikes… if it moves (or it's SUPPOSED to), we're on it. Four teens means four more opinions on every repair — and somebody always holding the flashlight.
+          </p>
+          <blockquote class="border-l-[3px] border-primary pl-4 italic text-base-content/80">
+            "B&amp;Ms Garage are devoted to fixing anything by sharing our knowledge with family and friends with hope that we can solve issues by working together."
+          </blockquote>
+          <p class="font-teko text-2xl md:text-3xl text-primary">A LIFETIME OF FIXIN'!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-base-200 reveal">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Swing By the Shop</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          HOLLER AT US
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto stagger-children">
+        <!-- Collabs & Business -->
+        <div class="card bg-base-100 rounded-lg" style="border:1px solid var(--steel);">
+          <div class="card-body items-center text-center gap-3 p-6">
+            <svg class="w-8 h-8 text-primary" aria-hidden="true"><use href="#i-mail"/></svg>
+            <h3 class="label-condensed">COLLABS <span class="text-secondary">&</span> BUSINESS</h3>
+            <p class="text-sm text-base-content/70">Sponsorships, collabs, and business stuff — holler at the shop.</p>
+            <div class="flex items-center justify-center gap-2 mt-auto">
+              <a href="mailto:bandmsgarage@gmail.com" class="btn btn-primary gap-2">EMAIL THE SHOP</a>
+              <button type="button" class="btn btn-square btn-outline copy-code" data-code="bandmsgarage@gmail.com" aria-label="Copy email address bandmsgarage@gmail.com">
+                <svg class="w-4 h-4 cc-icon" aria-hidden="true"><use href="#i-copy"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fan Mail -->
+        <div class="card bg-base-100 rounded-lg" style="border:1px solid var(--steel);">
+          <div class="card-body items-center text-center gap-3 p-6">
+            <svg class="w-8 h-8 text-primary" aria-hidden="true"><use href="#i-hexnut"/></svg>
+            <h3 class="label-condensed">FAN MAIL</h3>
+            <p class="text-sm text-base-content/70">Send it old-school. We read everything.</p>
+            <div class="shipping-label w-full px-4 py-3 text-left mt-auto">
+              B &amp; M'S GARAGE LLC<br>
+              8350 SOUTH SUNRIDGE VIEW LANE<br>
+              PAYSON, UTAH 84651
+            </div>
+          </div>
+        </div>
+
+        <!-- The Shop -->
+        <div class="card bg-base-100 rounded-lg" style="border:1px solid var(--steel);">
+          <div class="card-body items-center text-center gap-3 p-6">
+            <svg class="w-8 h-8 text-primary" aria-hidden="true"><use href="#i-pin"/></svg>
+            <h3 class="label-condensed">THE SHOP</h3>
+            <p class="title-card text-2xl">PAYSON, UTAH</p>
+            <p class="text-sm text-base-content/70 mt-auto">B &amp; M's Garage LLC — a real garage, real repairs, real family.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social row -->
+      <div class="flex justify-center gap-6 sm:gap-8 mt-12 flex-wrap">
+        <div class="flex flex-col items-center gap-1.5">
+          <a href="https://www.youtube.com/@bandmsgarage" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="YouTube">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-youtube"/></svg>
+          </a>
+          <span class="label-condensed text-base-content/60" style="font-size:.6875rem;">YouTube</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <a href="https://www.instagram.com/bandmsgarage" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Instagram">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-instagram"/></svg>
+          </a>
+          <span class="label-condensed text-base-content/60" style="font-size:.6875rem;">Instagram</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <a href="https://www.tiktok.com/@bms.garage" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="TikTok">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-tiktok"/></svg>
+          </a>
+          <span class="label-condensed text-base-content/60" style="font-size:.6875rem;">TikTok</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <a href="https://www.facebook.com/bandmsgarage" target="_blank" rel="noopener noreferrer" class="social-circle" aria-label="Facebook">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-facebook"/></svg>
+          </a>
+          <span class="label-condensed text-base-content/60" style="font-size:.6875rem;">Facebook</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <a href="mailto:bandmsgarage@gmail.com" class="social-circle" aria-label="Email bandmsgarage@gmail.com">
+            <svg class="w-5 h-5" aria-hidden="true"><use href="#i-mail"/></svg>
+          </a>
+          <span class="label-condensed text-base-content/60" style="font-size:.6875rem;">Email</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container mx-auto px-4 py-12 flex flex-col items-center gap-6 text-center">
+      <img src="images/logo.png" alt="B&M's Garage badge" class="h-8 w-auto" loading="lazy" decoding="async">
+      <p class="font-teko text-2xl footer-tagline">A LIFETIME OF FIXIN'!</p>
+      <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 label-condensed text-base-content/70" aria-label="Footer">
+        <a href="#latest" class="hover:text-primary transition-colors">Latest</a>
+        <a href="#deals" class="hover:text-primary transition-colors">Deals</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+        <a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Amazon Favorites</a>
+      </nav>
+      <p class="text-sm text-base-content/70">&copy; 2026 B&M's Garage. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Video Lightbox Modal -->
-  <div id="videoLightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm">
-    <div class="relative w-full max-w-5xl mx-4">
-      <button id="closeLightbox" class="absolute -top-12 right-0 btn btn-circle btn-ghost text-white text-2xl hover:bg-white/20">
-        <i class="fas fa-times"></i>
+  <div id="videoLightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm overscroll-contain" role="dialog" aria-modal="true" aria-label="Video player">
+    <div class="relative w-full max-w-5xl mx-4 max-h-[calc(100svh-6rem)]">
+      <button id="closeLightbox" class="fixed top-3 right-3 z-10 btn btn-circle btn-ghost text-white bg-black/50 hover:bg-white/20" aria-label="Close video">
+        <svg class="w-6 h-6" aria-hidden="true"><use href="#i-x"/></svg>
       </button>
-      <div class="aspect-video">
-        <iframe id="videoFrame" class="w-full h-full rounded-lg border-0" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="aspect-video" style="max-width: calc((100svh - 6rem) * 16 / 9); margin-inline: auto;">
+        <iframe id="videoFrame" class="w-full h-full rounded-lg border-0" src="" title="B&M's Garage video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 
+  <!-- Screen-reader announcement for copy-to-clipboard feedback -->
+  <div id="copy-status" role="status" class="sr-only"></div>
+
   <!-- Back to top button -->
-  <a href="#home" class="btn btn-circle btn-primary fixed bottom-6 right-6 shadow-lg opacity-0 translate-y-10 transition-all duration-300" id="backToTop">
-    <i class="fas fa-arrow-up"></i>
+  <a href="#home" class="btn btn-circle btn-primary fixed bottom-6 right-6 shadow-lg opacity-0 translate-y-10 transition-all duration-300" id="backToTop" aria-label="Back to top">
+    <svg class="w-5 h-5" aria-hidden="true"><use href="#i-arrow-up"/></svg>
   </a>
 
   <script>
-    // Load YouTube data (shorts and stats)
+    // ---------------------------------------------------------------
+    // Partner deals — owners: edit this list, the cards render themselves.
+    // NOTE: never link shopbmsgarage.com (expired domain).
+    // ---------------------------------------------------------------
+    var PARTNERS = [
+      { name: "ArcCaptain", category: "WELDERS", deal: "5% OFF", code: "B&MsGarage", url: "https://www.arccaptain.com/?ref=B%26MsGarage" },
+      { name: "Brunt Workwear", category: "WORKWEAR", deal: "$10 OFF", code: "BANDM10", url: "http://bruntworkwear.com/BANDM10" },
+      { name: "Olight", category: "FLASHLIGHTS", deal: "DEAL LINK", code: null, url: "https://www.olightstore.com/s/T1TDON" },
+      { name: "Hovsco", category: "E-BIKES", deal: "$50 OFF", code: null, url: "https://www.hovsco.com/BMsGarage" },
+      { name: "Himiway", category: "E-BIKES", deal: "GARAGE60 DEAL", code: "GARAGE60", url: "https://himiwaybike.info/4bMHsvC" },
+      { name: "Mowrator", category: "MOWERS", deal: "10% OFF", code: "bmgarage", url: "https://mowrator.com/?ref=ikfdazhz", note: "Link gets you 5% — code bmgarage bumps it to 10%." },
+      { name: "Black Dirt Organics / Mushroom Bloom", category: "SOIL", deal: "10% OFF", code: "B&M10", url: null, note: "Orem, Utah" }
+    ];
+
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---- Helpers ----
+    function esc(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function formatViews(raw) {
+      var n = parseInt(raw, 10);
+      if (isNaN(n)) return '';
+      if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M views';
+      if (n >= 1e3) return Math.round(n / 1e3) + 'K views';
+      return n + ' views';
+    }
+
+    function formatDuration(iso) {
+      var m = /^PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?$/.exec(iso || '');
+      if (!m) return '';
+      var h = parseInt(m[1] || 0, 10), mi = parseInt(m[2] || 0, 10), s = parseInt(m[3] || 0, 10);
+      function pad(x) { return x < 10 ? '0' + x : '' + x; }
+      return h ? h + ':' + pad(mi) + ':' + pad(s) : mi + ':' + pad(s);
+    }
+
+    function relativeDate(iso) {
+      var then = new Date(iso).getTime();
+      if (isNaN(then)) return '';
+      var days = Math.floor((Date.now() - then) / 864e5);
+      if (days <= 0) return 'today';
+      if (days === 1) return 'yesterday';
+      if (days < 7) return days + ' days ago';
+      if (days < 30) { var w = Math.floor(days / 7); return w + (w === 1 ? ' week ago' : ' weeks ago'); }
+      if (days < 365) { var mo = Math.floor(days / 30); return mo + (mo === 1 ? ' month ago' : ' months ago'); }
+      var y = Math.floor(days / 365); return y + (y === 1 ? ' year ago' : ' years ago');
+    }
+
+    function chipHTML(icon, text) {
+      return '<span class="latest-chip"><svg class="w-4 h-4" aria-hidden="true"><use href="#' + icon + '"/></svg>' + esc(text) + '</span>';
+    }
+
+    // ---- Featured facade player (#latest) ----
+    function renderLatest(video, videoCountRaw) {
+      var el = document.getElementById('latest-container');
+      var vid = video.id;
+      var title = esc(video.title);
+      var chips = [];
+      if (video.viewCount) chips.push(chipHTML('i-eye', formatViews(video.viewCount)));
+      if (video.publishedAt) chips.push(chipHTML('i-clock', relativeDate(video.publishedAt)));
+      var latestDuration = formatDuration(video.duration);
+      if (latestDuration) chips.push('<span class="latest-chip latest-chip--mono">' + latestDuration + '</span>');
+      var isNew = video.publishedAt && (Date.now() - new Date(video.publishedAt).getTime()) < 7 * 864e5;
+      var count = parseInt(videoCountRaw, 10);
+
+      el.innerHTML =
+        '<div class="grid lg:grid-cols-[2fr_1fr] gap-8 items-start">' +
+          '<div id="latest-player" class="relative aspect-video rounded-lg overflow-hidden bg-base-300" style="border:1px solid var(--steel);">' +
+            '<img src="https://img.youtube.com/vi/' + vid + '/maxresdefault.jpg" alt="' + title + '" class="w-full h-full object-cover" decoding="async" ' +
+              'onerror="if(!this.dataset.f){this.dataset.f=1;this.src=\'https://img.youtube.com/vi/' + vid + '/hqdefault.jpg\'}else{this.onerror=null;this.src=\'https://img.youtube.com/vi/' + vid + '/mqdefault.jpg\'}">' +
+            '<button type="button" id="latest-play" class="absolute inset-0 w-full h-full flex items-center justify-center bg-black/20 hover:bg-black/5 transition-colors" aria-label="Play: ' + title + '">' +
+              '<span class="facade-play"><svg class="w-9 h-9" aria-hidden="true"><use href="#i-play"/></svg></span>' +
+            '</button>' +
+          '</div>' +
+          '<div class="card bg-base-200 rounded-lg" style="border:1px solid var(--steel); border-top:4px solid #53E52B;">' +
+            '<div class="card-body gap-4 p-6">' +
+              (isNew ? '<div><span class="deal-pill">NEW THIS WEEK</span></div>' : '') +
+              '<h3 class="title-card text-2xl md:text-3xl leading-tight">' + title + '</h3>' +
+              (chips.length ? '<div class="flex flex-wrap gap-2">' + chips.join('') + '</div>' : '') +
+              '<a href="https://www.youtube.com/@bandmsgarage/videos" target="_blank" rel="noopener noreferrer" class="link link-hover text-primary font-bold">Can\'t wait? Binge all ' + (isNaN(count) ? '264' : count) + ' &rarr;</a>' +
+            '</div>' +
+          '</div>' +
+        '</div>';
+
+      document.getElementById('latest-play').addEventListener('click', function () {
+        var player = document.getElementById('latest-player');
+        player.innerHTML = '<iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&playsinline=1&rel=0" title="' + title + '" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        // Keep keyboard focus with the now-playing video (the button just removed itself)
+        var frame = player.querySelector('iframe');
+        frame.setAttribute('tabindex', '0');
+        frame.focus();
+      });
+    }
+
+    function ytFallbackButton(label) {
+      return '<div class="text-center md:col-span-2 lg:col-span-3">' +
+        '<a href="https://www.youtube.com/@bandmsgarage/videos" target="_blank" rel="noopener noreferrer" class="btn btn-lg btn-yt gap-2">' +
+        '<svg class="w-5 h-5" aria-hidden="true"><use href="#i-youtube"/></svg>' + label + '</a></div>';
+    }
+
+    function renderLatestFallback() {
+      document.getElementById('latest-container').innerHTML = ytFallbackButton('WATCH ON YOUTUBE');
+    }
+
+    // ---- Video grid (#videos) ----
+    function videoCardHTML(v) {
+      var meta = [];
+      var duration = formatDuration(v.duration);
+      if (v.viewCount) meta.push(esc(formatViews(v.viewCount)));
+      if (v.publishedAt) meta.push(esc(relativeDate(v.publishedAt)));
+      return '<a href="https://www.youtube.com/watch?v=' + v.id + '" data-video="' + v.id + '" class="video-card video-lightbox">' +
+        '<figure class="relative overflow-hidden">' +
+          '<img src="https://img.youtube.com/vi/' + v.id + '/hqdefault.jpg" alt="' + esc(v.title) + '" width="480" height="360" loading="lazy" decoding="async" ' +
+            'class="vc-thumb w-full aspect-video object-cover bg-base-300" ' +
+            'onerror="this.onerror=null;this.src=\'https://img.youtube.com/vi/' + v.id + '/mqdefault.jpg\'">' +
+          '<div class="play-overlay absolute inset-0 bg-black/50 flex items-center justify-center">' +
+            '<div class="btn btn-circle btn-primary btn-lg"><svg class="w-6 h-6" aria-hidden="true"><use href="#i-play"/></svg></div>' +
+          '</div>' +
+          (duration ? '<div class="duration-chip">' + duration + '</div>' : '') +
+        '</figure>' +
+        '<div class="card-body p-5 gap-2">' +
+          '<h3 class="title-card text-lg leading-snug">' + esc(v.title) + '</h3>' +
+          (meta.length ? '<p class="text-sm font-medium text-base-content/60">' + meta.join(' &middot; ') + '</p>' : '') +
+        '</div>' +
+      '</a>';
+    }
+
+    function renderVideoGrid(videos, videoCountRaw) {
+      var grid = document.getElementById('videos-grid');
+      var count = parseInt(videoCountRaw, 10);
+      var countText = isNaN(count) ? '264' : count;
+      var allTile =
+        '<a href="https://www.youtube.com/@bandmsgarage/videos" target="_blank" rel="noopener noreferrer" class="video-card bg-base-300 flex items-center justify-center min-h-[14rem]">' +
+          '<div class="text-center p-8">' +
+            '<div class="font-teko text-5xl md:text-6xl text-primary leading-none">ALL ' + countText + '</div>' +
+            '<div class="font-teko text-3xl mt-2">VIDEOS &rarr;</div>' +
+          '</div>' +
+        '</a>';
+      grid.innerHTML = videos.map(videoCardHTML).join('') + allTile;
+    }
+
+    function renderVideoGridFallback() {
+      document.getElementById('videos-grid').innerHTML = ytFallbackButton('ALL VIDEOS ON YOUTUBE');
+    }
+
+    // ---- Shorts rail ----
+    function renderShorts(shorts) {
+      var container = document.getElementById('shorts-container');
+      container.innerHTML = shorts.map(function (short) {
+        return '<a href="https://www.youtube.com/shorts/' + short.id + '" target="_blank" rel="noopener noreferrer" class="shorts-card snap-center flex-shrink-0">' +
+          '<div class="relative w-44 aspect-[9/16] rounded-xl overflow-hidden bg-base-300 transition-transform duration-300 hover:-translate-y-2" style="border:1px solid var(--steel);">' +
+            '<img src="https://img.youtube.com/vi/' + short.id + '/maxresdefault.jpg" alt="' + esc(short.title) + '" width="720" height="1280" loading="lazy" decoding="async" class="w-full h-full object-cover" ' +
+              'onerror="this.onerror=null;this.src=\'https://img.youtube.com/vi/' + short.id + '/hqdefault.jpg\'">' +
+            '<div class="play-overlay absolute inset-0 bg-black/30 flex items-center justify-center">' +
+              '<div class="btn btn-circle btn-primary"><svg class="w-5 h-5" aria-hidden="true"><use href="#i-play"/></svg></div>' +
+            '</div>' +
+            '<div class="absolute bottom-2 right-2 px-2 py-0.5 rounded text-xs font-bold inline-flex items-center gap-1" style="background:#53E52B;color:#0B0C0B;">' +
+              '<svg class="w-3 h-3" aria-hidden="true"><use href="#i-zap"/></svg>SHORT' +
+            '</div>' +
+          '</div>' +
+        '</a>';
+      }).join('');
+    }
+
+    function showShortsFallback() {
+      document.getElementById('shorts-container').classList.add('hidden');
+      document.getElementById('shorts-fallback').classList.remove('hidden');
+    }
+
+    // ---- Partner deals ----
+    function partnerCardHTML(p) {
+      var chip = p.code
+        ? '<button type="button" class="coupon-chip copy-code px-4 py-2" data-code="' + esc(p.code) + '" aria-label="Copy discount code ' + esc(p.code) + '">' +
+            '<span class="cc-label">' + esc(p.code) + '</span>' +
+            '<svg class="w-4 h-4 cc-icon" aria-hidden="true"><use href="#i-copy"/></svg>' +
+          '</button>'
+        : '<div class="coupon-chip coupon-chip--none px-4 py-2">NO CODE — DEAL\'S IN THE LINK</div>';
+      var note = (p.note && p.url) ? '<p class="text-sm text-base-content/60">' + esc(p.note) + '</p>' : '';
+      var action = p.url
+        ? '<a href="' + p.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-primary btn-block gap-2 mt-auto">SHOP ' + esc(p.name).toUpperCase() + ' <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>'
+        : '<div class="label-condensed text-base-content/60 mt-auto flex items-center justify-center gap-2"><svg class="w-4 h-4" aria-hidden="true"><use href="#i-pin"/></svg>' + esc((p.note || '').toUpperCase()) + '</div>';
+      return '<div class="card bg-base-100 rounded-lg" style="border:1px solid var(--steel);">' +
+        '<div class="card-body p-6 gap-3">' +
+          '<p class="label-condensed text-base-content/60">' + esc(p.category) + '</p>' +
+          '<h3 class="title-card text-2xl uppercase leading-tight">' + esc(p.name) + '</h3>' +
+          '<div><span class="deal-pill">' + esc(p.deal) + '</span></div>' +
+          chip +
+          note +
+          action +
+        '</div>' +
+      '</div>';
+    }
+
+    function renderDeals() {
+      var amazonCard =
+        '<div class="card bg-base-100 rounded-lg md:col-span-2 lg:col-span-3" style="border:1px solid var(--steel);">' +
+          '<div class="card-body p-6 items-center text-center gap-3">' +
+            '<p class="label-condensed text-base-content/60">AMAZON</p>' +
+            '<h3 class="title-card text-2xl uppercase">OUR AMAZON FAVORITES</h3>' +
+            '<p class="text-base-content/70 max-w-xl">"Check out some of our favorites that helped us get to where we are at!"</p>' +
+            '<a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer" class="btn btn-primary gap-2">SHOP OUR AMAZON FAVORITES <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>' +
+          '</div>' +
+        '</div>';
+      document.getElementById('deals-grid').innerHTML = PARTNERS.map(partnerCardHTML).join('') + amazonCard;
+    }
+    renderDeals();
+
+    // ---- Copy-to-clipboard (codes + email) ----
+    function legacyCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, text.length);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        return navigator.clipboard.writeText(text).then(function () { return true; }, function () { return legacyCopy(text); });
+      }
+      return Promise.resolve(legacyCopy(text));
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest('.copy-code');
+      if (!btn || btn.classList.contains('copied')) return;
+      copyText(btn.getAttribute('data-code')).then(function (ok) {
+        if (!ok) return;
+        var label = btn.querySelector('.cc-label');
+        var use = btn.querySelector('.cc-icon use');
+        var status = document.getElementById('copy-status');
+        var original = label ? label.textContent : null;
+        btn.classList.add('copied');
+        if (label) label.textContent = 'COPIED ✓';
+        if (use) use.setAttribute('href', '#i-check');
+        if (status) status.textContent = 'Copied ' + btn.getAttribute('data-code');
+        setTimeout(function () {
+          btn.classList.remove('copied');
+          if (label) label.textContent = original;
+          if (use) use.setAttribute('href', '#i-copy');
+          if (status) status.textContent = '';
+        }, 1500);
+      });
+    });
+
+    // ---- Load YouTube data (stats, latest, videos, shorts) ----
     fetch('youtube.json')
-      .then(response => response.json())
-      .then(data => {
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
         // Update stats counters
         if (data.stats) {
-          const subEl = document.getElementById('stat-subscribers');
-          const vidEl = document.getElementById('stat-videos');
+          var subEl = document.getElementById('stat-subscribers');
+          var vidEl = document.getElementById('stat-videos');
+          var viewEl = document.getElementById('stat-views');
           if (subEl && data.stats.subscriberCount) subEl.dataset.target = data.stats.subscriberCount;
           if (vidEl && data.stats.videoCount) vidEl.dataset.target = data.stats.videoCount;
+          if (viewEl && data.stats.viewCount) viewEl.dataset.target = data.stats.viewCount;
         }
 
-        // Render shorts
-        const shorts = data.shorts || data;
-        const container = document.getElementById('shorts-container');
-        container.innerHTML = shorts.map(short => `
-          <a href="https://www.youtube.com/shorts/${short.id}" target="_blank" rel="noopener noreferrer" class="snap-center flex-shrink-0">
-            <div class="relative w-44 aspect-[9/16] rounded-xl overflow-hidden bg-base-300 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <img src="https://img.youtube.com/vi/${short.id}/maxresdefault.jpg"
-                   alt="${short.title}"
-                   class="w-full h-full object-cover"
-                   onerror="this.src='https://img.youtube.com/vi/${short.id}/hqdefault.jpg'">
-              <div class="absolute inset-0 bg-black/30 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
-                <div class="btn btn-circle btn-primary">
-                  <i class="fas fa-play"></i>
-                </div>
-              </div>
-              <div class="absolute bottom-2 right-2 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">
-                <i class="fas fa-bolt mr-1"></i>SHORT
-              </div>
-            </div>
-          </a>
-        `).join('');
-      })
-      .catch(err => console.error('Failed to load YouTube data:', err));
+        var videoCount = data.stats && data.stats.videoCount;
 
-    // Parallax hero background (optimized for iOS/iPad)
+        // Featured + grid
+        var videos = data.videos || [];
+        if (videos.length) {
+          renderLatest(videos[0], videoCount);
+          renderVideoGrid(videos.slice(1, 6), videoCount);
+        } else {
+          renderLatestFallback();
+          renderVideoGridFallback();
+        }
+
+        // Shorts rail
+        var shorts = data.shorts || [];
+        if (shorts.length) {
+          renderShorts(shorts);
+        } else {
+          showShortsFallback();
+        }
+      })
+      .catch(function (err) {
+        console.error('Failed to load YouTube data:', err);
+        renderLatestFallback();
+        renderVideoGridFallback();
+        showShortsFallback();
+      });
+
+    // ---- Parallax hero background (optimized for iOS/iPad) ----
     var heroBackground = document.getElementById('heroBackground');
     var heroSection = document.getElementById('home');
     var ticking = false;
 
     function updateParallax() {
+      // Parallax (and the scale-up it needs) is desktop-only; imperceptible on phones
+      // and the scale crops family members out of the visible band.
+      if (window.innerWidth < 768) {
+        heroBackground.style.transform = '';
+        ticking = false;
+        return;
+      }
       var scrolled = window.pageYOffset || document.documentElement.scrollTop;
       var heroHeight = heroSection.offsetHeight;
 
       if (scrolled < heroHeight) {
         var translateY = Math.round(scrolled * 0.4);
-        heroBackground.style.transform = 'scale(1.1) translate3d(0, ' + translateY + 'px, 0)';
+        heroBackground.style.transform = 'scale(1.28) translate3d(0, ' + translateY + 'px, 0)';
       }
       ticking = false;
     }
 
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    }, { passive: true });
+    if (!prefersReducedMotion) {
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      }, { passive: true });
+    }
 
-    // Back to top button visibility
+    // ---- Back to top button visibility ----
     var backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function () {
       if (window.scrollY > 500) {
         backToTop.classList.remove('opacity-0', 'translate-y-10');
         backToTop.classList.add('opacity-100', 'translate-y-0');
@@ -459,30 +801,37 @@
         backToTop.classList.add('opacity-0', 'translate-y-10');
         backToTop.classList.remove('opacity-100', 'translate-y-0');
       }
-    });
+    }, { passive: true });
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // ---- Smooth scroll for anchor links ----
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        var target = document.querySelector(this.getAttribute('href'));
         if (target) {
-          const navHeight = document.querySelector('nav').offsetHeight;
-          const targetPosition = target.offsetTop - navHeight;
+          e.preventDefault();
+          // Close the (CSS focus-driven) mobile menu — preventDefault means no
+          // navigation ever blurs the hamburger otherwise.
+          if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+          var navHeight = document.querySelector('nav').offsetHeight;
+          var targetPosition = target.offsetTop - navHeight;
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: prefersReducedMotion ? 'auto' : 'smooth'
           });
+          // Move keyboard/screen-reader context to the destination (also makes
+          // the skip link actually skip, since we preventDefault above)
+          target.setAttribute('tabindex', '-1');
+          target.focus({ preventScroll: true });
         }
       });
     });
 
-    // Scroll reveal animation
+    // ---- Scroll reveal animation ----
     var revealElements = document.querySelectorAll('.reveal');
     var staggerElements = document.querySelectorAll('.stagger-children');
 
-    var revealObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
         }
@@ -492,116 +841,168 @@
       rootMargin: '0px 0px -50px 0px'
     });
 
-    revealElements.forEach(function(el) { revealObserver.observe(el); });
-    staggerElements.forEach(function(el) { revealObserver.observe(el); });
+    revealElements.forEach(function (el) { revealObserver.observe(el); });
+    staggerElements.forEach(function (el) { revealObserver.observe(el); });
 
-    // Animated counters
-    const counters = document.querySelectorAll('.counter');
-    let countersAnimated = false;
+    // ---- Animated counters ----
+    var counters = document.querySelectorAll('.counter');
+    var countersAnimated = false;
+
+    function formatCounterValue(value, format) {
+      if (format === 'k') return (value / 1000).toFixed(1) + 'K';
+      if (format === 'm') return (value / 1e6).toFixed(1) + 'M';
+      return Math.floor(value).toString();
+    }
 
     function animateCounter(counter) {
-      const target = parseInt(counter.getAttribute('data-target'));
-      const suffix = counter.getAttribute('data-suffix') || '';
-      const format = counter.getAttribute('data-format');
-      const duration = 1500;
-      const steps = 60;
-      const stepTime = duration / steps;
-      let current = 0;
-      const increment = target / steps;
+      var target = parseInt(counter.getAttribute('data-target'));
+      var suffix = counter.getAttribute('data-suffix') || '';
+      var format = counter.getAttribute('data-format');
+
+      if (prefersReducedMotion) {
+        counter.textContent = formatCounterValue(target, format) + suffix;
+        return;
+      }
+
+      var duration = 1500;
+      var steps = 60;
+      var stepTime = duration / steps;
+      var current = 0;
+      var increment = target / steps;
 
       function updateCounter() {
         current += increment;
         if (current < target) {
-          let displayValue = Math.floor(current);
-          if (format === 'k') {
-            displayValue = (current / 1000).toFixed(1) + 'K';
-          }
-          counter.textContent = displayValue + suffix;
+          counter.textContent = formatCounterValue(current, format) + suffix;
           setTimeout(updateCounter, stepTime);
         } else {
-          let finalValue = target;
-          if (format === 'k') {
-            finalValue = (target / 1000).toFixed(1) + 'K';
-          }
-          counter.textContent = finalValue + suffix;
+          counter.textContent = formatCounterValue(target, format) + suffix;
         }
       }
       updateCounter();
     }
 
-    const statsSection = document.querySelector('.stats');
-    const counterObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
+    var statStrip = document.getElementById('stat-strip');
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         if (entry.isIntersecting && !countersAnimated) {
           countersAnimated = true;
-          counters.forEach(function(counter) {
+          counters.forEach(function (counter) {
             animateCounter(counter);
           });
         }
       });
     }, { threshold: 0.5 });
 
-    if (statsSection) {
-      counterObserver.observe(statsSection);
+    if (statStrip) {
+      counterObserver.observe(statStrip);
     }
 
-    // Theme toggle
-    const themeDark = document.getElementById('themeDark');
-    const themeLight = document.getElementById('themeLight');
-    const html = document.documentElement;
+    // ---- Dropdown triggers: keep aria-expanded in sync with DaisyUI's
+    // focus-driven open state ----
+    document.querySelectorAll('.dropdown').forEach(function (dd) {
+      var trigger = dd.querySelector('[aria-haspopup]');
+      if (!trigger) return;
+      dd.addEventListener('focusin', function () {
+        if (!dd.classList.contains('dropdown-closed')) trigger.setAttribute('aria-expanded', 'true');
+      });
+      dd.addEventListener('focusout', function (e) {
+        if (!dd.contains(e.relatedTarget)) {
+          trigger.setAttribute('aria-expanded', 'false');
+          dd.classList.remove('dropdown-closed');
+        }
+      });
+      // Re-arm the dropdown when the trigger is activated again
+      trigger.addEventListener('click', function () {
+        dd.classList.remove('dropdown-closed');
+        trigger.setAttribute('aria-expanded', 'true');
+      });
+    });
+
+    // ---- Theme toggle ----
+    var themeDark = document.getElementById('themeDark');
+    var themeLight = document.getElementById('themeLight');
+    var themeToggleBtn = document.getElementById('themeToggleBtn');
+    var html = document.documentElement;
+
+    function syncThemePressed(theme) {
+      themeDark.setAttribute('aria-pressed', theme === 'bmsgarage' ? 'true' : 'false');
+      themeLight.setAttribute('aria-pressed', theme === 'bmsgarage-light' ? 'true' : 'false');
+    }
+    syncThemePressed(html.getAttribute('data-theme'));
 
     function setTheme(theme) {
       html.classList.add('theme-transitioning');
       html.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
-      setTimeout(function() { html.classList.remove('theme-transitioning'); }, 300);
-      // Close dropdown
-      document.activeElement.blur();
+      setTimeout(function () { html.classList.remove('theme-transitioning'); }, 300);
+      syncThemePressed(theme);
+      // Close the dropdown WITHOUT dumping keyboard focus to <body>: suppress the
+      // focus-driven open state, then return focus to the trigger.
+      themeToggleBtn.closest('.dropdown').classList.add('dropdown-closed');
+      themeToggleBtn.focus();
+      themeToggleBtn.setAttribute('aria-expanded', 'false');
     }
 
-    themeDark.addEventListener('click', function() {
+    themeDark.addEventListener('click', function () {
       setTheme('bmsgarage');
     });
 
-    themeLight.addEventListener('click', function() {
+    themeLight.addEventListener('click', function () {
       setTheme('bmsgarage-light');
     });
 
-    // Video Lightbox
+    // ---- Video Lightbox (delegated so JS-rendered cards work) ----
     var videoLightbox = document.getElementById('videoLightbox');
     var videoFrame = document.getElementById('videoFrame');
     var closeLightbox = document.getElementById('closeLightbox');
-    var videoLinks = document.querySelectorAll('.video-lightbox');
+    var lightboxLastFocused = null;
+    var lightboxScrollY = 0;
 
-    videoLinks.forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        var videoId = this.getAttribute('data-video');
-        videoFrame.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&playsinline=1&rel=0';
-        videoLightbox.classList.remove('hidden');
-        videoLightbox.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-      });
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('.video-lightbox');
+      if (!link) return;
+      e.preventDefault();
+      lightboxLastFocused = link;
+      var videoId = link.getAttribute('data-video');
+      videoFrame.src = 'https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=1&playsinline=1&rel=0';
+      videoLightbox.classList.remove('hidden');
+      videoLightbox.classList.add('flex');
+      // Scroll lock that also works on iOS Safari (plain overflow:hidden is ignored)
+      lightboxScrollY = window.scrollY;
+      document.body.style.cssText = 'position:fixed; top:-' + lightboxScrollY + 'px; left:0; right:0; overflow:hidden';
+      closeLightbox.focus();
     });
 
     function closeVideoLightbox() {
       videoLightbox.classList.add('hidden');
       videoLightbox.classList.remove('flex');
       videoFrame.src = '';
-      document.body.style.overflow = '';
+      document.body.style.cssText = '';
+      window.scrollTo(0, lightboxScrollY);
+      if (lightboxLastFocused) lightboxLastFocused.focus();
     }
 
     closeLightbox.addEventListener('click', closeVideoLightbox);
 
-    videoLightbox.addEventListener('click', function(e) {
+    videoLightbox.addEventListener('click', function (e) {
       if (e.target === videoLightbox) {
         closeVideoLightbox();
       }
     });
 
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && !videoLightbox.classList.contains('hidden')) {
+    document.addEventListener('keydown', function (e) {
+      if (videoLightbox.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
         closeVideoLightbox();
+      } else if (e.key === 'Tab') {
+        // Keep focus inside the modal: cycle between the close button and the player
+        e.preventDefault();
+        if (document.activeElement === closeLightbox) {
+          videoFrame.focus();
+        } else {
+          closeLightbox.focus();
+        }
       }
     });
   </script>

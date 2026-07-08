@@ -2,101 +2,440 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&family=Anton&family=Oswald:wght@700&family=Teko:wght@500;600;700&family=Russo+One&family=Black+Ops+One&display=swap');
+/* Fonts are loaded via <link> tags in index.html <head> — never via @import (browsers
+   ignore @import rules that land after compiled CSS). */
 
-.font-anton {
-  font-family: 'Anton', 'Bebas Neue', sans-serif;
+/* Theme-scoped custom properties (borders are not a DaisyUI token) */
+:root {
+  --steel: #262A26;
 }
-
-.font-oswald {
-  font-family: 'Oswald', 'Bebas Neue', sans-serif;
+[data-theme="bmsgarage-light"] {
+  --steel: #D5D8DB;
 }
 
 .font-teko {
-  font-family: 'Black Ops One', 'Russo One', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-style: italic;
+  font-weight: 800;
   letter-spacing: 0.02em;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Barlow', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  :focus-visible {
+    outline: 2px solid oklch(var(--p));
+    outline-offset: 2px;
   }
 }
 
 @layer components {
+  /* ---- Nameplate H2 — the GARAGE bar from the badge ---- */
+  .nameplate {
+    display: inline-block;
+    position: relative;
+    padding: .35em 1.6em;
+    border-radius: 4px;
+    border: 1px solid #6B7075;
+    background: linear-gradient(180deg, #F2F3F4 0%, #C9CDD1 45%, #9EA4AA 55%, #DDE0E2 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.7), inset 0 -1px 0 rgba(0,0,0,.25);
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0B0C0B;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    line-height: 1.15;
+  }
+  .nameplate .nameplate-bolt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    color: #6B7075;
+  }
+  .nameplate .nameplate-bolt:first-of-type { left: .5em; }
+  .nameplate .nameplate-bolt:last-of-type { right: .5em; }
+
+  /* ---- Eyebrow above nameplates ---- */
+  .eyebrow {
+    @apply flex items-center justify-center gap-2 uppercase text-primary;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    font-size: 0.8125rem;
+  }
+
+  .label-condensed {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8125rem;
+  }
+
+  /* ---- Nav ---- */
+  .nav-link {
+    @apply relative;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+  }
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 2px;
+    height: 2px;
+    background: oklch(var(--p));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 150ms ease;
+  }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* ---- YouTube red — reserved exclusively for Subscribe/YouTube CTAs ---- */
+  /* #D90000 keeps the YouTube-red identity while giving white text 4.5:1+ (AA) */
+  .btn-yt {
+    @apply text-white border-none;
+    background-color: #D90000;
+  }
+  .btn-yt:hover {
+    background-color: #B50000;
+  }
+
+  /* Hero-only fixed brand colors: the hero scrim is dark in BOTH themes,
+     so theme tokens (which darken in light mode) would lose contrast here. */
+  .text-shop-lime { color: #53E52B; }
+  .text-badge-kelly { color: #009830; }
+
+  /* Hero ghost CTA: 1px chrome border, white text (always sits on the dark scrim) */
+  .btn-chrome {
+    background: transparent;
+    border: 1px solid #C9CDD1;
+    color: #FFFFFF;
+  }
+  .btn-chrome:hover {
+    background: rgba(83, 229, 43, 0.08);
+    border-color: #53E52B;
+    color: #53E52B;
+  }
+
+  /* Card / featured titles: Kanit 700 Italic */
+  .title-card {
+    font-family: 'Kanit', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  /* Featured video metadata chips */
+  .latest-chip {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-base-300 text-sm text-base-content/80;
+  }
+  .latest-chip--mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 0.8125rem;
+  }
+
+  /* Featured facade play button: 72px lime circle, black triangle */
+  .facade-play {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 9999px;
+    background: #53E52B;
+    color: #0B0C0B;
+    transition: transform 200ms ease;
+  }
+  #latest-play:hover .facade-play,
+  #latest-play:focus-visible .facade-play {
+    transform: scale(1.1);
+  }
+
+  /* ---- Video cards ---- */
   .video-card {
-    @apply card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1;
+    @apply card bg-base-200 overflow-hidden rounded-lg;
+    border: 1px solid var(--steel);
+    transition: border-color 200ms ease, transform 200ms ease;
   }
-
-  .video-card:hover .play-overlay {
-    @apply opacity-100;
+  [data-theme="bmsgarage-light"] .video-card {
+    background-color: oklch(var(--b1));
   }
-
+  .video-card:hover,
+  .video-card:focus-visible {
+    border-color: oklch(var(--p));
+  }
+  .video-card .vc-thumb {
+    transition: transform 200ms ease;
+  }
+  .video-card:hover .vc-thumb {
+    transform: scale(1.03);
+  }
   .play-overlay {
     @apply opacity-0 transition-opacity duration-300;
   }
-
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  /* Hover reveal only on devices that actually hover (no sticky overlays on iOS) */
+  @media (hover: hover) {
+    .video-card:hover .play-overlay,
+    .shorts-card:hover .play-overlay {
+      @apply opacity-100;
+    }
+  }
+  .video-card:focus-visible .play-overlay,
+  .shorts-card:focus-visible .play-overlay {
+    @apply opacity-100;
+  }
+  /* Touch devices: no hover state exists, so show a persistent (subtler) play badge */
+  @media (hover: none) {
+    .play-overlay {
+      opacity: 1;
+      background: transparent;
+    }
+    .play-overlay .btn {
+      transform: scale(.75);
+      opacity: .9;
+    }
   }
 
-  .social-btn {
-    @apply btn btn-circle btn-ghost hover:btn-primary hover:text-white transition-all duration-300;
+  /* Duration chip — socket-size label */
+  .duration-chip {
+    @apply absolute bottom-2 right-2 px-2 py-0.5 bg-black/80 text-sm font-bold;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: 0.05em;
+    color: #53E52B;
+    border-radius: 2px;
   }
 
-  .nav-link {
-    @apply hover:text-primary transition-colors duration-200;
+  /* ---- Stat strip wells ---- */
+  .stat-well {
+    background: oklch(var(--b1));
+    border: 1px solid var(--steel);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,.35);
+    border-radius: 6px;
+  }
+  [data-theme="bmsgarage-light"] .stat-well {
+    background: oklch(var(--b3));
+    box-shadow: inset 0 2px 6px rgba(0,0,0,.08);
+  }
+  .stat-digits {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
   }
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  /* ---- Deals ---- */
+  .deal-pill {
+    /* lime-as-fill is legal in both themes: near-black text on lime ~11:1 */
+    @apply inline-block px-3 py-1 rounded font-bold text-sm uppercase;
+    background: #53E52B;
+    color: #0B0C0B;
+    letter-spacing: 0.05em;
+  }
+  .coupon-chip {
+    @apply w-full flex items-center justify-center gap-2 rounded;
+    min-height: 44px;
+    border: 2px dashed oklch(var(--p));
+    background: oklch(var(--b1));
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: transform 150ms ease, background-color 150ms ease, color 150ms ease;
+  }
+  .coupon-chip.copied {
+    background: #53E52B;
+    color: #0B0C0B;
+    border-style: solid;
+    border-color: #53E52B;
+    animation: copy-pop 150ms ease;
+  }
+  .coupon-chip--none {
+    border: 2px solid var(--steel);
+    cursor: default;
+    font-size: 0.8125rem;
+  }
+  @keyframes copy-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+  }
+
+  /* ---- About: chrome photo frame + caption plate ---- */
+  .chrome-frame {
+    padding: 4px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #F2F3F4 0%, #C9CDD1 45%, #9EA4AA 55%, #DDE0E2 100%);
+    box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  .caption-plate {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 text-white;
+    background: #0B0C0B;
+    border: 1px solid #6B7075;
+    border-radius: 3px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8125rem;
+  }
+
+  /* ---- Contact: shipping label ---- */
+  .shipping-label {
+    background: #FFFFFF;
+    color: #0B0C0B;
+    border: 2px solid #0B0C0B;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  /* ---- Social circles ---- */
+  .social-circle {
+    @apply inline-flex items-center justify-center rounded-full;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #C9CDD1;
+    color: currentColor;
+    transition: border-color 200ms ease, color 200ms ease, transform 200ms ease;
+  }
+  [data-theme="bmsgarage-light"] .social-circle {
+    border-color: #9EA4AA;
+  }
+  .social-circle:hover,
+  .social-circle:focus-visible {
+    border-color: oklch(var(--p));
+    color: oklch(var(--p));
+    transform: translateY(-1px);
+  }
+
+  /* ---- Footer ---- */
+  .site-footer {
+    background: #060706;
+  }
+  [data-theme="bmsgarage-light"] .site-footer {
+    background: oklch(var(--b3));
+  }
+  .site-footer .footer-tagline {
+    color: #9EA4AA; /* 8:1 on the dark footer */
+  }
+  [data-theme="bmsgarage-light"] .site-footer .footer-tagline {
+    color: #5B6065; /* 4.6:1 on the light footer */
+  }
+
+  /* JS-closed dropdown: suppress DaisyUI's focus-driven open state so the menu
+     can close while keyboard focus returns to the trigger */
+  .dropdown.dropdown-closed .dropdown-content {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
 @layer utilities {
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-
   .bg-noise {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
   }
+}
 
-  .logo-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+/* ---- Hero ---- */
+.hero-bg {
+  background-image: url('../images/banner-full.jpg');
+  /* Faces sit at ~48% of the image height; biasing the crop toward the
+     bottom pushes the family toward the top of the viewport, clear of the
+     bottom-anchored headline on short/wide windows. */
+  background-position: 50% 78%;
+}
+@media (min-width: 768px) {
+  .hero-bg {
+    /* Zoom in on the family (they occupy the middle of the frame). The
+       bottom-anchored origin crops empty wall/sky off the top and lifts
+       the faces into the upper third, clear of the headline.
+       Must match the scale() the parallax JS applies on scroll. */
+    transform: scale(1.28);
+    transform-origin: 50% 100%;
   }
+}
+@media (max-width: 767px) {
+  .hero-bg {
+    background-position: 48% 65%;
+  }
+}
 
-  @keyframes pulse-glow {
-    0%, 100% {
-      filter: drop-shadow(0 0 15px rgba(34, 197, 94, 0.5)) drop-shadow(0 0 30px rgba(34, 197, 94, 0.3));
-    }
-    50% {
-      filter: drop-shadow(0 0 25px rgba(34, 197, 94, 0.7)) drop-shadow(0 0 50px rgba(34, 197, 94, 0.4));
-    }
-  }
+.hero-scrim {
+  background: linear-gradient(180deg, rgba(6,7,6,.50) 0%, rgba(6,7,6,.18) 40%, rgba(6,7,6,.94) 100%);
+}
+
+/* Logo: static drop shadow + ONE chrome-sheen sweep on load, then nothing */
+.hero-logo {
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,.5));
+}
+.hero-logo-wrap {
+  position: relative;
+}
+.hero-logo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,.5) 50%, transparent 60%);
+  -webkit-mask-image: url('../images/logo.png');
+  mask-image: url('../images/logo.png');
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  transform: translateX(-120%);
+  animation: chrome-sheen 1.2s ease-out .15s 1 forwards;
+  pointer-events: none;
+}
+@keyframes chrome-sheen {
+  to { transform: translateX(120%); }
+}
+
+/* Hero load choreography: content rises 20px, staggered 100ms after the sheen */
+.hero-rise {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: hero-rise .6s ease-out forwards;
+}
+.hero-rise-1 { animation-delay: .35s; }
+.hero-rise-2 { animation-delay: .45s; }
+.hero-rise-3 { animation-delay: .55s; }
+.hero-rise-4 { animation-delay: .65s; }
+@keyframes hero-rise {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Animated counter */
-.stat-value {
-  transition: all 0.3s ease;
+.stat-digits {
+  transition: transform 0.3s ease;
 }
 
-.stat:hover .stat-value {
-  transform: scale(1.1);
-}
-
-/* Scroll reveal animations */
+/* Scroll reveal animations (transform/opacity only, softened) */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(12px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .reveal.active {
@@ -107,7 +446,7 @@
 /* Staggered animations for child elements */
 .stagger-children > * {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(12px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -117,62 +456,22 @@
 .stagger-children.active > *:nth-child(4) { transition-delay: 300ms; }
 .stagger-children.active > *:nth-child(5) { transition-delay: 400ms; }
 .stagger-children.active > *:nth-child(6) { transition-delay: 500ms; }
+.stagger-children.active > *:nth-child(7) { transition-delay: 600ms; }
+.stagger-children.active > *:nth-child(8) { transition-delay: 700ms; }
 
 .stagger-children.active > * {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Gradient border on video cards */
-.video-card {
-  position: relative;
-  background: linear-gradient(var(--b2), var(--b2)) padding-box,
-              linear-gradient(135deg, transparent, transparent) border-box;
-  border: 2px solid transparent;
-  transition: all 0.4s ease;
-}
-
-.video-card:hover {
-  background: linear-gradient(var(--b2), var(--b2)) padding-box,
-              linear-gradient(135deg, #22C55E, #16A34A, #22C55E) border-box;
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
-}
-
-/* Shimmer effect on buttons */
-.btn-shimmer {
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-shimmer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.3),
-    transparent
-  );
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    left: -100%;
-  }
-  50%, 100% {
-    left: 100%;
-  }
-}
-
-/* Hero title with thicker letters */
-.hero-title {
-  -webkit-text-stroke: 2px #22C55E;
-  paint-order: stroke fill;
+/* ---- Reduced motion: no parallax (handled in JS), no sheen, reveals visible ---- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-wrap::after { animation: none; opacity: 0; }
+  .hero-rise { animation: none; opacity: 1; transform: none; }
+  .reveal,
+  .stagger-children > * { opacity: 1; transform: none; transition: none; }
+  .coupon-chip.copied { animation: none; }
+  .animate-bounce { animation: none; }
 }
 
 /* Match select placeholder to input placeholder */
