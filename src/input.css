@@ -378,9 +378,40 @@
     transform-origin: 50% 100%;
   }
 }
+/* Mobile hero: overlay text always collides with the faces in portrait
+   (the full image height is visible, faces land mid-screen). Switch to a
+   stacked layout — photo up top, text on solid black below it. */
 @media (max-width: 767px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    /* Text below the photo uses white type; keep the hoodie-black backdrop in both themes */
+    background: #0B0C0B;
+  }
+  .hero-media {
+    position: relative;
+    inset: auto;
+    height: 46svh;
+    min-height: 300px;
+    flex: none;
+  }
   .hero-bg {
-    background-position: 48% 65%;
+    /* Zoom within the photo box so the family fills it */
+    background-size: auto 165%;
+    background-position: 50% 30%;
+  }
+  .hero-scrim {
+    /* Only a gentle top fade behind the badge; the text below has a solid bg */
+    background: linear-gradient(180deg, rgba(6, 7, 6, 0.45) 0%, rgba(6, 7, 6, 0) 40%);
+  }
+  .hero-badge {
+    width: min(38vw, 150px);
+  }
+  .hero-content {
+    min-height: 0;
+    align-items: flex-start;
+    padding-top: 1.5rem;
+    padding-bottom: calc(2.5rem + env(safe-area-inset-bottom)) !important;
   }
 }
 
