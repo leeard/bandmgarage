@@ -498,7 +498,8 @@
     // ---------------------------------------------------------------
     // Optional extras keyed by host. Coupon codes + deal amounts + URLs are
     // parsed daily from the latest video description (youtube.json.deals).
-    // This map is only for category labels / notes when the description omits them.
+    // PARTNER_META = light labels/notes. PARTNER_FORCE = always-on sponsors
+    // (use when a brand is important but the description only has a bare link).
     // NOTE: never link shopbmsgarage.com (expired domain).
     // ---------------------------------------------------------------
     var PARTNER_META = {
@@ -512,11 +513,24 @@
       'blackdirtorganics.com': { category: 'SOIL', note: 'Orem, Utah' }
     };
 
+    // Hard-coded sponsors — win over empty parsed fields. Olight never prints a
+    // coupon code in descriptions; the T1TDON link IS the deal.
+    var PARTNER_FORCE = {
+      'olightstore.com': {
+        name: 'Olight',
+        category: 'FLASHLIGHTS',
+        deal: 'DEAL LINK',
+        code: null,
+        url: 'https://www.olightstore.com/s/T1TDON',
+        note: 'Big channel sponsor — use our link for the shop deal.'
+      }
+    };
+
     // Offline / first-paint fallback if youtube.json.deals is missing.
     var PARTNERS_FALLBACK = [
       { name: 'ArcCaptain', category: 'WELDERS', deal: '5% OFF', code: 'B&MsGarage', url: 'https://www.arccaptain.com/?ref=B%26MsGarage', host: 'arccaptain.com' },
       { name: 'Brunt Workwear', category: 'WORKWEAR', deal: '$10 OFF', code: 'BANDM10', url: 'https://bruntworkwear.com/BANDM10', host: 'bruntworkwear.com' },
-      { name: 'Olight', category: 'FLASHLIGHTS', deal: 'DEAL LINK', code: null, url: 'https://www.olightstore.com/s/T1TDON', host: 'olightstore.com' },
+      { name: 'Olight', category: 'FLASHLIGHTS', deal: 'DEAL LINK', code: null, url: 'https://www.olightstore.com/s/T1TDON', host: 'olightstore.com', note: 'Big channel sponsor — use our link for the shop deal.' },
       { name: 'Hovsco', category: 'E-BIKES', deal: '$50 OFF', code: null, url: 'https://www.hovsco.com/BMsGarage', host: 'hovsco.com' },
       { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60', url: 'https://himiwaybike.info/4bMHsvC', host: 'himiwaybike.info' },
       { name: 'Mowrator', category: 'MOWERS', deal: '10% OFF', code: 'bmgarage', url: 'https://mowrator.com/?ref=ikfdazhz', note: 'Link gets you 5% — code bmgarage bumps it to 10%.', host: 'mowrator.com' }
@@ -751,32 +765,67 @@
       '</div>';
     }
 
+    function titleCaseBrand(name) {
+      if (name && name === name.toUpperCase() && name.length > 2) {
+        return name.replace(/\w+/g, function (w) {
+          return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+        });
+      }
+      return name;
+    }
+
     function mergeDeals(liveDeals) {
-      if (!liveDeals || !liveDeals.length) {
-        return PARTNERS_FALLBACK.slice();
+      var byHost = {};
+      var order = [];
+
+      function upsertFromLive(d) {
+        var host = d.host || partnerHost(d.url);
+        if (!host || byHost[host]) return;
+        var meta = PARTNER_META[host] || {};
+        var force = PARTNER_FORCE[host] || {};
+        var name = force.name || d.name || meta.name || host.replace(/\.(com|info|net|org)$/i, '');
+        byHost[host] = {
+          host: host,
+          // Forced URL wins when description is empty; else prefer live
+          url: d.url || force.url || null,
+          name: titleCaseBrand(name),
+          category: force.category || meta.category || 'PARTNER',
+          // Live code/deal when present; forced fields fill gaps (Olight)
+          deal: d.deal || force.deal || meta.deal || (d.code || force.code ? 'DISCOUNT CODE' : 'DEAL LINK'),
+          code: d.code != null ? d.code : (force.code != null ? force.code : (meta.code != null ? meta.code : null)),
+          note: force.note || meta.note || null
+        };
+        order.push(host);
       }
 
-      return liveDeals.map(function (d) {
-        var host = d.host || partnerHost(d.url);
-        var meta = PARTNER_META[host] || {};
-        var name = d.name || meta.name || host.replace(/\.(com|info|net|org)$/i, '');
-        // Title-case brand names that came through as ALL CAPS headers
-        if (name && name === name.toUpperCase() && name.length > 2) {
-          name = name.replace(/\w+/g, function (w) {
-            return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
-          });
-        }
-        return {
+      if (liveDeals && liveDeals.length) {
+        liveDeals.forEach(upsertFromLive);
+      } else {
+        PARTNERS_FALLBACK.forEach(function (f) {
+          byHost[f.host] = f;
+          order.push(f.host);
+        });
+      }
+
+      // Ensure forced sponsors always appear (e.g. Olight) even if a week's
+      // description somehow drops them.
+      Object.keys(PARTNER_FORCE).forEach(function (host) {
+        if (byHost[host]) return;
+        var force = PARTNER_FORCE[host];
+        byHost[host] = {
           host: host,
-          url: d.url || null,
-          name: name,
-          category: meta.category || 'PARTNER',
-          // Prefer parsed description values; fall back to meta / generic label
-          deal: d.deal || meta.deal || (d.code ? 'DISCOUNT CODE' : 'DEAL LINK'),
-          code: d.code != null ? d.code : (meta.code != null ? meta.code : null),
-          note: meta.note || null
+          url: force.url || null,
+          name: force.name,
+          category: force.category || 'PARTNER',
+          deal: force.deal || 'DEAL LINK',
+          code: force.code != null ? force.code : null,
+          note: force.note || null
         };
+        // Near the front — major sponsors first
+        order.unshift(host);
       });
+
+      return order.map(function (h) { return byHost[h]; });
     }
 
     function renderDeals(liveDeals) {
