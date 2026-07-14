@@ -95,6 +95,7 @@
           <li><a href="#latest" class="nav-link">Latest</a></li>
           <li><a href="#videos" class="nav-link">Videos</a></li>
           <li><a href="#shorts" class="nav-link">Shorts</a></li>
+          <li><a href="#gear" class="nav-link">Gear</a></li>
           <li><a href="#deals" class="nav-link">Deals</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -111,6 +112,7 @@
         <li><a href="#latest" class="nav-link">Latest</a></li>
         <li><a href="#videos" class="nav-link">Videos</a></li>
         <li><a href="#shorts" class="nav-link">Shorts</a></li>
+        <li><a href="#gear" class="nav-link">Gear</a></li>
         <li><a href="#deals" class="nav-link">Deals</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -194,12 +196,12 @@
         </div>
         <div class="stat-well p-5 text-center">
           <svg class="w-5 h-5 mx-auto mb-2 text-primary" aria-hidden="true"><use href="#i-hexnut"/></svg>
-          <div id="stat-videos" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="264" data-suffix="+">264+</div>
+          <div id="stat-videos" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="265" data-suffix="+">265+</div>
           <div class="label-condensed text-base-content/60 mt-1">Videos and Countin'</div>
         </div>
         <div class="stat-well p-5 text-center">
           <svg class="w-5 h-5 mx-auto mb-2 text-primary" aria-hidden="true"><use href="#i-hexnut"/></svg>
-          <div id="stat-views" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="7322693" data-format="m" data-suffix="+">7.3M+</div>
+          <div id="stat-views" class="stat-digits text-primary text-4xl md:text-5xl counter" data-target="7342451" data-format="m" data-suffix="+">7.3M+</div>
           <div class="label-condensed text-base-content/60 mt-1">Total Views</div>
         </div>
       </div>
@@ -243,7 +245,7 @@
   <section id="shorts" class="py-20 bg-base-100 reveal">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>60 Seconds or Less</p>
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Quick hits from the garage</p>
         <h2 class="nameplate">
           <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
           QUICK FIXES
@@ -272,8 +274,36 @@
     </div>
   </section>
 
-  <!-- Partner Deals -->
-  <section id="deals" class="py-20 bg-base-200 reveal">
+  <!-- Gear from recent videos (auto-filled from youtube.json) -->
+  <section id="gear" class="py-20 bg-base-200 reveal">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-6">
+        <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Used On Camera</p>
+        <h2 class="nameplate">
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+          GEAR THAT EARNED A SPOT
+          <svg class="nameplate-bolt" aria-hidden="true"><use href="#i-hexnut"/></svg>
+        </h2>
+      </div>
+      <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
+        Product links from recent video descriptions — stuff that showed up in the garage. Updated as new videos land.
+      </p>
+
+      <div id="gear-list" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto stagger-children">
+        <!-- Filled from youtube.json.gear; falls back to storefront if empty -->
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-outline btn-primary gap-2">
+          Browse our Amazon favorites
+          <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Deals (coupon codes — edited by hand in PARTNERS below) -->
+  <section id="deals" class="py-20 bg-base-100 reveal">
     <div class="container mx-auto px-4">
       <div class="text-center mb-6">
         <p class="eyebrow mb-3"><svg class="w-3.5 h-3.5" aria-hidden="true"><use href="#i-hexnut"/></svg>Deals That Keep the Shop Running</p>
@@ -284,7 +314,7 @@
         </h2>
       </div>
       <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-        Straight out of our video descriptions. Using these codes supports the channel at no extra cost to you!
+        Partner links from the latest video description, with our codes where we have them. Using these supports the garage at no extra cost to you.
       </p>
 
       <div id="deals-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto stagger-children">
@@ -435,6 +465,7 @@
       <p class="font-teko text-2xl footer-tagline">A LIFETIME OF FIXIN'!</p>
       <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2 label-condensed text-base-content/70" aria-label="Footer">
         <a href="#latest" class="hover:text-primary transition-colors">Latest</a>
+        <a href="#gear" class="hover:text-primary transition-colors">Gear</a>
         <a href="#deals" class="hover:text-primary transition-colors">Deals</a>
         <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
         <a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Amazon Favorites</a>
@@ -465,17 +496,31 @@
 
   <script>
     // ---------------------------------------------------------------
-    // Partner deals — owners: edit this list, the cards render themselves.
+    // Partner codes / labels keyed by host. URLs come from youtube.json.deals
+    // (scraped daily from the latest long-form description). Only edit this map
+    // when a code or brand name changes — not for routine URL refresh.
     // NOTE: never link shopbmsgarage.com (expired domain).
     // ---------------------------------------------------------------
-    var PARTNERS = [
-      { name: "ArcCaptain", category: "WELDERS", deal: "5% OFF", code: "B&MsGarage", url: "https://www.arccaptain.com/?ref=B%26MsGarage" },
-      { name: "Brunt Workwear", category: "WORKWEAR", deal: "$10 OFF", code: "BANDM10", url: "http://bruntworkwear.com/BANDM10" },
-      { name: "Olight", category: "FLASHLIGHTS", deal: "DEAL LINK", code: null, url: "https://www.olightstore.com/s/T1TDON" },
-      { name: "Hovsco", category: "E-BIKES", deal: "$50 OFF", code: null, url: "https://www.hovsco.com/BMsGarage" },
-      { name: "Himiway", category: "E-BIKES", deal: "GARAGE60 DEAL", code: "GARAGE60", url: "https://himiwaybike.info/4bMHsvC" },
-      { name: "Mowrator", category: "MOWERS", deal: "10% OFF", code: "bmgarage", url: "https://mowrator.com/?ref=ikfdazhz", note: "Link gets you 5% — code bmgarage bumps it to 10%." },
-      { name: "Black Dirt Organics / Mushroom Bloom", category: "SOIL", deal: "10% OFF", code: "B&M10", url: null, note: "Orem, Utah" }
+    var PARTNER_META = {
+      'arccaptain.com': { name: 'ArcCaptain', category: 'WELDERS', deal: '5% OFF', code: 'B&MsGarage' },
+      'bruntworkwear.com': { name: 'Brunt Workwear', category: 'WORKWEAR', deal: '$10 OFF', code: 'BANDM10' },
+      'olightstore.com': { name: 'Olight', category: 'FLASHLIGHTS', deal: 'DEAL LINK', code: null },
+      'hovsco.com': { name: 'Hovsco', category: 'E-BIKES', deal: '$50 OFF', code: null },
+      'himiwaybike.info': { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60' },
+      'himiway.com': { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60' },
+      'mowrator.com': { name: 'Mowrator', category: 'MOWERS', deal: '10% OFF', code: 'bmgarage', note: 'Link gets you 5% — code bmgarage bumps it to 10%.' },
+      'blackdirtorganics.com': { name: 'Black Dirt Organics / Mushroom Bloom', category: 'SOIL', deal: '10% OFF', code: 'B&M10', note: 'Orem, Utah' }
+    };
+
+    // Static fallback if youtube.json.deals is missing (offline / first paint failure).
+    var PARTNERS_FALLBACK = [
+      { name: 'ArcCaptain', category: 'WELDERS', deal: '5% OFF', code: 'B&MsGarage', url: 'https://www.arccaptain.com/?ref=B%26MsGarage', host: 'arccaptain.com' },
+      { name: 'Brunt Workwear', category: 'WORKWEAR', deal: '$10 OFF', code: 'BANDM10', url: 'https://bruntworkwear.com/BANDM10', host: 'bruntworkwear.com' },
+      { name: 'Olight', category: 'FLASHLIGHTS', deal: 'DEAL LINK', code: null, url: 'https://www.olightstore.com/s/T1TDON', host: 'olightstore.com' },
+      { name: 'Hovsco', category: 'E-BIKES', deal: '$50 OFF', code: null, url: 'https://www.hovsco.com/BMsGarage', host: 'hovsco.com' },
+      { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60', url: 'https://himiwaybike.info/4bMHsvC', host: 'himiwaybike.info' },
+      { name: 'Mowrator', category: 'MOWERS', deal: '10% OFF', code: 'bmgarage', url: 'https://mowrator.com/?ref=ikfdazhz', note: 'Link gets you 5% — code bmgarage bumps it to 10%.', host: 'mowrator.com' },
+      { name: 'Black Dirt Organics / Mushroom Bloom', category: 'SOIL', deal: '10% OFF', code: 'B&M10', url: null, note: 'Orem, Utah', host: 'blackdirtorganics.com' }
     ];
 
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -639,7 +684,48 @@
       document.getElementById('shorts-fallback').classList.remove('hidden');
     }
 
-    // ---- Partner deals ----
+    // ---- Gear from youtube.json (product links scraped daily from descriptions) ----
+    function gearCardHTML(g) {
+      return '<a href="' + esc(g.link) + '" target="_blank" rel="noopener noreferrer sponsored" class="card bg-base-100 rounded-lg hover:-translate-y-1 transition-transform" style="border:1px solid var(--steel);">' +
+        '<figure class="relative overflow-hidden">' +
+          '<img src="https://img.youtube.com/vi/' + g.id + '/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" ' +
+            'class="w-full aspect-video object-cover bg-base-300" ' +
+            'onerror="this.onerror=null;this.src=\'https://img.youtube.com/vi/' + g.id + '/mqdefault.jpg\'">' +
+        '</figure>' +
+        '<div class="card-body p-5 gap-2">' +
+          '<h3 class="title-card text-lg leading-snug">' + esc(g.title) + '</h3>' +
+          '<span class="label-condensed text-primary">Shop the product &rarr;</span>' +
+        '</div>' +
+      '</a>';
+    }
+
+    function renderGear(gear) {
+      var list = document.getElementById('gear-list');
+      if (!list) return;
+      if (gear && gear.length) {
+        list.innerHTML = gear.map(gearCardHTML).join('');
+      } else {
+        // No product-specific links in recent descriptions — point at the storefront.
+        list.innerHTML =
+          '<div class="card bg-base-100 rounded-lg md:col-span-2 lg:col-span-3" style="border:1px solid var(--steel);">' +
+            '<div class="card-body p-8 items-center text-center gap-3">' +
+              '<p class="label-condensed text-base-content/60">NO PRODUCT LINKS IN RECENT VIDS YET</p>' +
+              '<h3 class="title-card text-2xl uppercase">Check the Amazon storefront</h3>' +
+              '<p class="text-base-content/70 max-w-xl">When a video description has a product link (Amazon / geni.us), it shows up here automatically.</p>' +
+              '<a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary gap-2">Shop Amazon favorites <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>' +
+            '</div>' +
+          '</div>';
+      }
+    }
+
+    // ---- Partner deals (URLs auto from youtube.json.deals; codes from PARTNER_META) ----
+    function partnerHost(urlOrHost) {
+      if (!urlOrHost) return '';
+      var s = String(urlOrHost).toLowerCase();
+      s = s.replace(/^https?:\/\//, '').replace(/^www\./, '');
+      return s.split('/')[0];
+    }
+
     function partnerCardHTML(p) {
       var chip = p.code
         ? '<button type="button" class="coupon-chip copy-code px-4 py-2" data-code="' + esc(p.code) + '" aria-label="Copy discount code ' + esc(p.code) + '">' +
@@ -648,14 +734,17 @@
           '</button>'
         : '<div class="coupon-chip coupon-chip--none px-4 py-2">NO CODE — DEAL\'S IN THE LINK</div>';
       var note = (p.note && p.url) ? '<p class="text-sm text-base-content/60">' + esc(p.note) + '</p>' : '';
+      if (p.note && !p.url) {
+        note = '';
+      }
       var action = p.url
-        ? '<a href="' + p.url + '" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-primary btn-block gap-2 mt-auto">SHOP ' + esc(p.name).toUpperCase() + ' <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>'
+        ? '<a href="' + esc(p.url) + '" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-outline btn-primary btn-block gap-2 mt-auto">SHOP ' + esc(p.name).toUpperCase() + ' <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>'
         : '<div class="label-condensed text-base-content/60 mt-auto flex items-center justify-center gap-2"><svg class="w-4 h-4" aria-hidden="true"><use href="#i-pin"/></svg>' + esc((p.note || '').toUpperCase()) + '</div>';
       return '<div class="card bg-base-100 rounded-lg" style="border:1px solid var(--steel);">' +
         '<div class="card-body p-6 gap-3">' +
-          '<p class="label-condensed text-base-content/60">' + esc(p.category) + '</p>' +
+          '<p class="label-condensed text-base-content/60">' + esc(p.category || 'PARTNER') + '</p>' +
           '<h3 class="title-card text-2xl uppercase leading-tight">' + esc(p.name) + '</h3>' +
-          '<div><span class="deal-pill">' + esc(p.deal) + '</span></div>' +
+          (p.deal ? '<div><span class="deal-pill">' + esc(p.deal) + '</span></div>' : '') +
           chip +
           note +
           action +
@@ -663,19 +752,74 @@
       '</div>';
     }
 
-    function renderDeals() {
+    function mergeDeals(liveDeals) {
+      var byHost = {};
+      var order = [];
+
+      function upsert(host, url) {
+        if (!host || byHost[host]) return;
+        var meta = PARTNER_META[host] || {};
+        // Skip bare amazon product hosts here — those belong in Gear
+        if (host === 'amazon.com' || host === 'a.co' || host === 'amzn.to' || host === 'geni.us') return;
+        byHost[host] = {
+          host: host,
+          url: url || null,
+          name: meta.name || host.replace(/\.(com|info|net|org)$/i, ''),
+          category: meta.category || 'PARTNER',
+          deal: meta.deal || 'DEAL LINK',
+          code: meta.code != null ? meta.code : null,
+          note: meta.note || null
+        };
+        order.push(host);
+      }
+
+      (liveDeals || []).forEach(function (d) {
+        var host = d.host || partnerHost(d.url);
+        upsert(host, d.url);
+      });
+
+      // Always include known partners that had no link this week (e.g. local soil co)
+      Object.keys(PARTNER_META).forEach(function (host) {
+        if (!byHost[host] && PARTNER_META[host].code && !PARTNER_META[host].url) {
+          // meta-only (no default url) — e.g. Black Dirt with store note
+        }
+        if (!byHost[host] && PARTNERS_FALLBACK.some(function (f) { return f.host === host && !f.url; })) {
+          var f = PARTNERS_FALLBACK.filter(function (x) { return x.host === host; })[0];
+          byHost[host] = f;
+          order.push(host);
+        }
+      });
+
+      if (!order.length) {
+        return PARTNERS_FALLBACK.slice();
+      }
+
+      // Append offline-only partners (url: null) that still have a code to advertise
+      PARTNERS_FALLBACK.forEach(function (f) {
+        if (!byHost[f.host] && !f.url && f.code) {
+          byHost[f.host] = f;
+          order.push(f.host);
+        }
+      });
+
+      return order.map(function (h) { return byHost[h]; });
+    }
+
+    function renderDeals(liveDeals) {
+      var partners = mergeDeals(liveDeals);
       var amazonCard =
         '<div class="card bg-base-100 rounded-lg md:col-span-2 lg:col-span-3" style="border:1px solid var(--steel);">' +
           '<div class="card-body p-6 items-center text-center gap-3">' +
             '<p class="label-condensed text-base-content/60">AMAZON</p>' +
             '<h3 class="title-card text-2xl uppercase">OUR AMAZON FAVORITES</h3>' +
             '<p class="text-base-content/70 max-w-xl">"Check out some of our favorites that helped us get to where we are at!"</p>' +
-            '<a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer" class="btn btn-primary gap-2">SHOP OUR AMAZON FAVORITES <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>' +
+            '<a href="https://www.amazon.com/shop/bmsgarage" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-primary gap-2">SHOP OUR AMAZON FAVORITES <svg class="w-4 h-4" aria-hidden="true"><use href="#i-external"/></svg></a>' +
           '</div>' +
         '</div>';
-      document.getElementById('deals-grid').innerHTML = PARTNERS.map(partnerCardHTML).join('') + amazonCard;
+      document.getElementById('deals-grid').innerHTML = partners.map(partnerCardHTML).join('') + amazonCard;
     }
-    renderDeals();
+    // First paint uses fallback; replaced when youtube.json loads
+    renderDeals(null);
 
     // ---- Copy-to-clipboard (codes + email) ----
     function legacyCopy(text) {
@@ -722,18 +866,26 @@
       });
     });
 
-    // ---- Load YouTube data (stats, latest, videos, shorts) ----
+    // ---- Load YouTube data — drives every auto section ----
     fetch('youtube.json')
       .then(function (response) { return response.json(); })
       .then(function (data) {
-        // Update stats counters
+        // Stats: update targets; if counter already finished animating, snap to live value
         if (data.stats) {
-          var subEl = document.getElementById('stat-subscribers');
-          var vidEl = document.getElementById('stat-videos');
-          var viewEl = document.getElementById('stat-views');
-          if (subEl && data.stats.subscriberCount) subEl.dataset.target = data.stats.subscriberCount;
-          if (vidEl && data.stats.videoCount) vidEl.dataset.target = data.stats.videoCount;
-          if (viewEl && data.stats.viewCount) viewEl.dataset.target = data.stats.viewCount;
+          [
+            ['stat-subscribers', data.stats.subscriberCount],
+            ['stat-videos', data.stats.videoCount],
+            ['stat-views', data.stats.viewCount]
+          ].forEach(function (pair) {
+            var el = document.getElementById(pair[0]);
+            if (!el || !pair[1]) return;
+            el.dataset.target = pair[1];
+            if (countersAnimated) {
+              var format = el.getAttribute('data-format');
+              var suffix = el.getAttribute('data-suffix') || '';
+              el.textContent = formatCounterValue(parseInt(pair[1], 10), format) + suffix;
+            }
+          });
         }
 
         var videoCount = data.stats && data.stats.videoCount;
@@ -755,12 +907,20 @@
         } else {
           showShortsFallback();
         }
+
+        // Gear (product links from descriptions)
+        renderGear(data.gear || []);
+
+        // Partner deal URLs from latest description
+        renderDeals(data.deals || null);
       })
       .catch(function (err) {
         console.error('Failed to load YouTube data:', err);
         renderLatestFallback();
         renderVideoGridFallback();
         showShortsFallback();
+        renderGear([]);
+        renderDeals(null);
       });
 
     // ---- Parallax hero background (optimized for iOS/iPad) ----
