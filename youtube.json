@@ -26,7 +26,7 @@
     },
     {
       "id": "gk1zUdpX2TM",
-      "title": "Episode I can make/build that with OAKER!!! \ud83d\ude02\ud83d\udee0\ufe0f\ud83d\ude0e",
+      "title": "Episode I can make/build that with OAKER!!! 😂🛠️😎",
       "thumbnail": "https://i.ytimg.com/vi/gk1zUdpX2TM/hqdefault.jpg",
       "publishedAt": "2025-12-09T00:58:59Z"
     },
@@ -40,57 +40,51 @@
   "videos": [
     {
       "id": "fvr6LxV76fg",
-      "title": "Fixin\u2019 things and saying GOODBYE \ud83d\ude2d",
+      "title": "Fixin’ things and saying GOODBYE 😭",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
-      "viewCount": "16697"
+      "viewCount": "17471"
     },
     {
       "id": "hhKhGPQcpyM",
       "title": "SPARKS FlY this 4th of July!",
       "publishedAt": "2026-07-03T12:00:04Z",
       "duration": "PT33M31S",
-      "viewCount": "14655"
+      "viewCount": "14718"
     },
     {
       "id": "nRSs5Ko-418",
       "title": "Huff and Puff but the Deck Still Stands!",
       "publishedAt": "2026-06-26T12:00:09Z",
       "duration": "PT39M31S",
-      "viewCount": "14779"
+      "viewCount": "14782"
     },
     {
       "id": "wh-couzBRHQ",
-      "title": "Cox\u2019s \u2764\ufe0f TREES and anything wih a MOTOR!!!",
+      "title": "Cox’s ❤️ TREES and anything wih a MOTOR!!!",
       "publishedAt": "2026-06-19T12:00:15Z",
       "duration": "PT29M34S",
-      "viewCount": "11927"
+      "viewCount": "11933"
     },
     {
       "id": "cd_jG4H6DQU",
-      "title": "Mowing the lawn from the hot tub\u2026 WHAT!!!!",
+      "title": "Mowing the lawn from the hot tub… WHAT!!!!",
       "publishedAt": "2026-06-12T12:00:12Z",
       "duration": "PT31M9S",
-      "viewCount": "12623"
+      "viewCount": "12624"
     },
     {
       "id": "dmpYbcdRWzY",
       "title": "Ben REVS it UP with @89Built",
       "publishedAt": "2026-06-05T12:00:29Z",
       "duration": "PT27M16S",
-      "viewCount": "19431"
+      "viewCount": "19443"
     }
   ],
-  "stats": {
-    "subscriberCount": "69600",
-    "videoCount": "265",
-    "viewCount": "7342451",
-    "updatedAt": "2026-07-14T01:03:30Z"
-  },
   "gear": [
     {
       "id": "wh-couzBRHQ",
-      "title": "Cox's \u2764\ufe0f TREES and anything wih a MOTOR!!!",
+      "title": "Cox’s ❤️ TREES and anything wih a MOTOR!!!",
       "link": "https://www.amazon.com/dp/B0B7LMB22Q"
     }
   ],
@@ -100,24 +94,30 @@
       "host": "arccaptain.com"
     },
     {
-      "url": "https://www.olightstore.com/s/T1TDON",
-      "host": "olightstore.com"
-    },
-    {
-      "url": "https://bruntworkwear.com/BANDM10",
+      "url": "http://bruntworkwear.com/BANDM10",
       "host": "bruntworkwear.com"
-    },
-    {
-      "url": "https://www.hovsco.com/BMsGarage",
-      "host": "hovsco.com"
     },
     {
       "url": "https://himiwaybike.info/4bMHsvC",
       "host": "himiwaybike.info"
     },
     {
+      "url": "https://www.hovsco.com/BMsGarage",
+      "host": "hovsco.com"
+    },
+    {
       "url": "https://mowrator.com/?ref=ikfdazhz",
       "host": "mowrator.com"
+    },
+    {
+      "url": "https://www.olightstore.com/s/T1TDON",
+      "host": "olightstore.com"
     }
-  ]
+  ],
+  "stats": {
+    "subscriberCount": "69600",
+    "videoCount": "265",
+    "viewCount": "7343480",
+    "updatedAt": "2026-07-14T01:04:03Z"
+  }
 }
