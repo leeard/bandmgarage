@@ -108,24 +108,16 @@ jobs:
             }
           ] | .[0:6]')
 
-          # Partner deal links: pull sponsor/shop URLs from the newest long-form
-          # description (the boilerplate block they paste each week). Deduped by host.
-          # Social / YouTube / generic storefront are excluded.
-          deals=$(echo "$details" | jq --argjson short_ids "$short_ids" '
-            def host:
-              sub("^https?://(www\\.)?"; "") | split("/")[0] | ascii_downcase;
-            [.items[] | select(.id as $i | $short_ids | index($i) | not)] as $long |
-            ($long[0].snippet.description // "") as $desc |
-            [ $desc
-              | scan("https?://[^\\s)\"<>]+")
-              | sub("[\\.,;]+$"; "")
-              | select(test("youtube\\.com|youtu\\.be|instagram\\.com|tiktok\\.com|facebook\\.com|twitter\\.com|x\\.com|bandmsgarage"; "i") | not)
-              | select(test("amazon\\.com/shop/"; "i") | not)
-              | { url: ., host: host }
-            ]
-            | unique_by(.host)
-            | .[0:12]
-          ')
+          # Partner deals: URLs + coupon codes parsed from the newest long-form
+          # description (the weekly sponsor boilerplate). See scripts/parse_deals.py.
+          # Pipe JSON (not a shell string) so & / quotes in descriptions stay intact.
+          deals=$(echo "$details" | jq --argjson short_ids "$short_ids" -c '
+            {description: ([.items[] | select(.id as $i | $short_ids | index($i) | not)][0].snippet.description // "")}
+          ' | python3 scripts/parse_deals.py)
+          if ! echo "$deals" | jq -e 'type == "array"' >/dev/null 2>&1; then
+            echo "WARN: deals parse failed, using empty list" >&2
+            deals='[]'
+          fi
 
           channel=$(curl -s "https://www.googleapis.com/youtube/v3/channels?key=${YOUTUBE_API_KEY}&id=${CHANNEL_ID}&part=statistics")
 
@@ -158,6 +150,7 @@ jobs:
           cat youtube.json
           echo ""
           echo "Counts — videos: $(jq '.videos | length' youtube.json), shorts: $(jq '.shorts | length' youtube.json), gear: $(jq '.gear | length' youtube.json), deals: $(jq '.deals | length' youtube.json)"
+          echo "Deal codes: $(jq -r '[.deals[] | select(.code != null) | "\(.host)=\(.code)"] | join(", ")' youtube.json)"
 
       - name: Commit and push if changed
         run: |

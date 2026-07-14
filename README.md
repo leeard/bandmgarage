@@ -35,7 +35,7 @@ Then open `index.html` in your browser.
 | Shorts | Channel Shorts playlist |
 | Stats | Channel subscriber / video / view counts |
 | Gear | Product links (`amazon.com/dp`, `a.co`, `amzn.to`, `geni.us`) in descriptions |
-| Deals | Partner URLs from the latest long-form description (codes stay in `PARTNER_META` in `index.html`) |
+| Deals | Partner URLs **and coupon codes** parsed from the latest long-form description (`scripts/parse_deals.py`) |
 
 Manual trigger:
 

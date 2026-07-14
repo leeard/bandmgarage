@@ -26,7 +26,7 @@
     },
     {
       "id": "gk1zUdpX2TM",
-      "title": "Episode I can make/build that with OAKER!!! 😂🛠️😎",
+      "title": "Episode I can make/build that with OAKER!!! \ud83d\ude02\ud83d\udee0\ufe0f\ud83d\ude0e",
       "thumbnail": "https://i.ytimg.com/vi/gk1zUdpX2TM/hqdefault.jpg",
       "publishedAt": "2025-12-09T00:58:59Z"
     },
@@ -40,7 +40,7 @@
   "videos": [
     {
       "id": "fvr6LxV76fg",
-      "title": "Fixin’ things and saying GOODBYE 😭",
+      "title": "Fixin\u2019 things and saying GOODBYE \ud83d\ude2d",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
       "viewCount": "17471"
@@ -61,14 +61,14 @@
     },
     {
       "id": "wh-couzBRHQ",
-      "title": "Cox’s ❤️ TREES and anything wih a MOTOR!!!",
+      "title": "Cox\u2019s \u2764\ufe0f TREES and anything wih a MOTOR!!!",
       "publishedAt": "2026-06-19T12:00:15Z",
       "duration": "PT29M34S",
       "viewCount": "11933"
     },
     {
       "id": "cd_jG4H6DQU",
-      "title": "Mowing the lawn from the hot tub… WHAT!!!!",
+      "title": "Mowing the lawn from the hot tub\u2026 WHAT!!!!",
       "publishedAt": "2026-06-12T12:00:12Z",
       "duration": "PT31M9S",
       "viewCount": "12624"
@@ -84,40 +84,58 @@
   "gear": [
     {
       "id": "wh-couzBRHQ",
-      "title": "Cox’s ❤️ TREES and anything wih a MOTOR!!!",
+      "title": "Cox\u2019s \u2764\ufe0f TREES and anything wih a MOTOR!!!",
       "link": "https://www.amazon.com/dp/B0B7LMB22Q"
     }
   ],
   "deals": [
     {
+      "host": "arccaptain.com",
       "url": "https://www.arccaptain.com/?ref=B%26MsGarage",
-      "host": "arccaptain.com"
+      "name": "ARCCAPTAIN",
+      "code": "B&MsGarage",
+      "deal": "5% OFF"
     },
     {
-      "url": "http://bruntworkwear.com/BANDM10",
-      "host": "bruntworkwear.com"
-    },
-    {
-      "url": "https://himiwaybike.info/4bMHsvC",
-      "host": "himiwaybike.info"
-    },
-    {
-      "url": "https://www.hovsco.com/BMsGarage",
-      "host": "hovsco.com"
-    },
-    {
-      "url": "https://mowrator.com/?ref=ikfdazhz",
-      "host": "mowrator.com"
-    },
-    {
+      "host": "olightstore.com",
       "url": "https://www.olightstore.com/s/T1TDON",
-      "host": "olightstore.com"
+      "name": "Olight",
+      "code": null,
+      "deal": null
+    },
+    {
+      "host": "bruntworkwear.com",
+      "url": "https://bruntworkwear.com/BANDM10",
+      "name": "Brunt",
+      "code": "BANDM10",
+      "deal": "$10 OFF"
+    },
+    {
+      "host": "hovsco.com",
+      "url": "https://www.hovsco.com/BMsGarage",
+      "name": "Hovsco",
+      "code": null,
+      "deal": "$50 OFF"
+    },
+    {
+      "host": "himiwaybike.info",
+      "url": "https://himiwaybike.info/4bMHsvC",
+      "name": "Himiway",
+      "code": "GARAGE60",
+      "deal": null
+    },
+    {
+      "host": "mowrator.com",
+      "url": "https://mowrator.com/?ref=ikfdazhz",
+      "name": "Mowrator",
+      "code": "bmgarage",
+      "deal": "10% OFF"
     }
   ],
   "stats": {
     "subscriberCount": "69600",
     "videoCount": "265",
     "viewCount": "7343480",
-    "updatedAt": "2026-07-14T01:04:03Z"
+    "updatedAt": "2026-07-14T01:06:46Z"
   }
 }

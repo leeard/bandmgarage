@@ -314,7 +314,7 @@
         </h2>
       </div>
       <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
-        Partner links from the latest video description, with our codes where we have them. Using these supports the garage at no extra cost to you.
+        Partner links and coupon codes pulled from the latest video description. Using these supports the garage at no extra cost to you.
       </p>
 
       <div id="deals-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto stagger-children">
@@ -496,31 +496,30 @@
 
   <script>
     // ---------------------------------------------------------------
-    // Partner codes / labels keyed by host. URLs come from youtube.json.deals
-    // (scraped daily from the latest long-form description). Only edit this map
-    // when a code or brand name changes — not for routine URL refresh.
+    // Optional extras keyed by host. Coupon codes + deal amounts + URLs are
+    // parsed daily from the latest video description (youtube.json.deals).
+    // This map is only for category labels / notes when the description omits them.
     // NOTE: never link shopbmsgarage.com (expired domain).
     // ---------------------------------------------------------------
     var PARTNER_META = {
-      'arccaptain.com': { name: 'ArcCaptain', category: 'WELDERS', deal: '5% OFF', code: 'B&MsGarage' },
-      'bruntworkwear.com': { name: 'Brunt Workwear', category: 'WORKWEAR', deal: '$10 OFF', code: 'BANDM10' },
-      'olightstore.com': { name: 'Olight', category: 'FLASHLIGHTS', deal: 'DEAL LINK', code: null },
-      'hovsco.com': { name: 'Hovsco', category: 'E-BIKES', deal: '$50 OFF', code: null },
-      'himiwaybike.info': { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60' },
-      'himiway.com': { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60' },
-      'mowrator.com': { name: 'Mowrator', category: 'MOWERS', deal: '10% OFF', code: 'bmgarage', note: 'Link gets you 5% — code bmgarage bumps it to 10%.' },
-      'blackdirtorganics.com': { name: 'Black Dirt Organics / Mushroom Bloom', category: 'SOIL', deal: '10% OFF', code: 'B&M10', note: 'Orem, Utah' }
+      'arccaptain.com': { category: 'WELDERS' },
+      'bruntworkwear.com': { category: 'WORKWEAR' },
+      'olightstore.com': { category: 'FLASHLIGHTS' },
+      'hovsco.com': { category: 'E-BIKES' },
+      'himiwaybike.info': { category: 'E-BIKES' },
+      'himiway.com': { category: 'E-BIKES' },
+      'mowrator.com': { category: 'MOWERS', note: 'Link gets you 5% — code bmgarage bumps it to 10%.' },
+      'blackdirtorganics.com': { category: 'SOIL', note: 'Orem, Utah' }
     };
 
-    // Static fallback if youtube.json.deals is missing (offline / first paint failure).
+    // Offline / first-paint fallback if youtube.json.deals is missing.
     var PARTNERS_FALLBACK = [
       { name: 'ArcCaptain', category: 'WELDERS', deal: '5% OFF', code: 'B&MsGarage', url: 'https://www.arccaptain.com/?ref=B%26MsGarage', host: 'arccaptain.com' },
       { name: 'Brunt Workwear', category: 'WORKWEAR', deal: '$10 OFF', code: 'BANDM10', url: 'https://bruntworkwear.com/BANDM10', host: 'bruntworkwear.com' },
       { name: 'Olight', category: 'FLASHLIGHTS', deal: 'DEAL LINK', code: null, url: 'https://www.olightstore.com/s/T1TDON', host: 'olightstore.com' },
       { name: 'Hovsco', category: 'E-BIKES', deal: '$50 OFF', code: null, url: 'https://www.hovsco.com/BMsGarage', host: 'hovsco.com' },
       { name: 'Himiway', category: 'E-BIKES', deal: 'GARAGE60 DEAL', code: 'GARAGE60', url: 'https://himiwaybike.info/4bMHsvC', host: 'himiwaybike.info' },
-      { name: 'Mowrator', category: 'MOWERS', deal: '10% OFF', code: 'bmgarage', url: 'https://mowrator.com/?ref=ikfdazhz', note: 'Link gets you 5% — code bmgarage bumps it to 10%.', host: 'mowrator.com' },
-      { name: 'Black Dirt Organics / Mushroom Bloom', category: 'SOIL', deal: '10% OFF', code: 'B&M10', url: null, note: 'Orem, Utah', host: 'blackdirtorganics.com' }
+      { name: 'Mowrator', category: 'MOWERS', deal: '10% OFF', code: 'bmgarage', url: 'https://mowrator.com/?ref=ikfdazhz', note: 'Link gets you 5% — code bmgarage bumps it to 10%.', host: 'mowrator.com' }
     ];
 
     var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -753,56 +752,31 @@
     }
 
     function mergeDeals(liveDeals) {
-      var byHost = {};
-      var order = [];
-
-      function upsert(host, url) {
-        if (!host || byHost[host]) return;
-        var meta = PARTNER_META[host] || {};
-        // Skip bare amazon product hosts here — those belong in Gear
-        if (host === 'amazon.com' || host === 'a.co' || host === 'amzn.to' || host === 'geni.us') return;
-        byHost[host] = {
-          host: host,
-          url: url || null,
-          name: meta.name || host.replace(/\.(com|info|net|org)$/i, ''),
-          category: meta.category || 'PARTNER',
-          deal: meta.deal || 'DEAL LINK',
-          code: meta.code != null ? meta.code : null,
-          note: meta.note || null
-        };
-        order.push(host);
-      }
-
-      (liveDeals || []).forEach(function (d) {
-        var host = d.host || partnerHost(d.url);
-        upsert(host, d.url);
-      });
-
-      // Always include known partners that had no link this week (e.g. local soil co)
-      Object.keys(PARTNER_META).forEach(function (host) {
-        if (!byHost[host] && PARTNER_META[host].code && !PARTNER_META[host].url) {
-          // meta-only (no default url) — e.g. Black Dirt with store note
-        }
-        if (!byHost[host] && PARTNERS_FALLBACK.some(function (f) { return f.host === host && !f.url; })) {
-          var f = PARTNERS_FALLBACK.filter(function (x) { return x.host === host; })[0];
-          byHost[host] = f;
-          order.push(host);
-        }
-      });
-
-      if (!order.length) {
+      if (!liveDeals || !liveDeals.length) {
         return PARTNERS_FALLBACK.slice();
       }
 
-      // Append offline-only partners (url: null) that still have a code to advertise
-      PARTNERS_FALLBACK.forEach(function (f) {
-        if (!byHost[f.host] && !f.url && f.code) {
-          byHost[f.host] = f;
-          order.push(f.host);
+      return liveDeals.map(function (d) {
+        var host = d.host || partnerHost(d.url);
+        var meta = PARTNER_META[host] || {};
+        var name = d.name || meta.name || host.replace(/\.(com|info|net|org)$/i, '');
+        // Title-case brand names that came through as ALL CAPS headers
+        if (name && name === name.toUpperCase() && name.length > 2) {
+          name = name.replace(/\w+/g, function (w) {
+            return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+          });
         }
+        return {
+          host: host,
+          url: d.url || null,
+          name: name,
+          category: meta.category || 'PARTNER',
+          // Prefer parsed description values; fall back to meta / generic label
+          deal: d.deal || meta.deal || (d.code ? 'DISCOUNT CODE' : 'DEAL LINK'),
+          code: d.code != null ? d.code : (meta.code != null ? meta.code : null),
+          note: meta.note || null
+        };
       });
-
-      return order.map(function (h) { return byHost[h]; });
     }
 
     function renderDeals(liveDeals) {
