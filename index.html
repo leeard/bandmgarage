@@ -996,9 +996,8 @@
         var target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          // Close the (CSS focus-driven) mobile menu — preventDefault means no
-          // navigation ever blurs the hamburger otherwise.
-          if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+          // Close the mobile menu before scrolling to the selected section.
+          closeAllDropdowns(null);
           var navHeight = document.querySelector('nav').offsetHeight;
           var targetPosition = target.offsetTop - navHeight;
           window.scrollTo({
@@ -1085,24 +1084,70 @@
       counterObserver.observe(statStrip);
     }
 
-    // ---- Dropdown triggers: keep aria-expanded in sync with DaisyUI's
-    // focus-driven open state ----
-    document.querySelectorAll('.dropdown').forEach(function (dd) {
+    // ---- Dropdown triggers: explicit tap/click toggle ----
+    // iOS Safari never gives keyboard focus to a <button> on tap, so DaisyUI's
+    // :focus / :focus-within open state never fires on iPhone — the burger and
+    // theme menus simply won't open. Drive the open state explicitly instead:
+    // .dropdown-open forces the menu visible; .dropdown-closed forces it hidden
+    // and, being later in the stylesheet than the focus rules, keeps a menu shut
+    // even while its trigger still holds focus.
+    var dropdowns = Array.prototype.slice.call(document.querySelectorAll('.dropdown'));
+
+    function closeDropdown(dd) {
+      if (!dd) return;
+      dd.classList.remove('dropdown-open');
+      dd.classList.add('dropdown-closed');
+      var trigger = dd.querySelector('[aria-haspopup]');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      if (dd.contains(document.activeElement) && document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+    }
+
+    function closeAllDropdowns(except) {
+      dropdowns.forEach(function (dd) { if (dd !== except) closeDropdown(dd); });
+    }
+
+    function openDropdown(dd) {
+      closeAllDropdowns(dd);
+      dd.classList.remove('dropdown-closed');
+      dd.classList.add('dropdown-open');
+      var trigger = dd.querySelector('[aria-haspopup]');
+      if (trigger) trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    dropdowns.forEach(function (dd) {
       var trigger = dd.querySelector('[aria-haspopup]');
       if (!trigger) return;
-      dd.addEventListener('focusin', function () {
-        if (!dd.classList.contains('dropdown-closed')) trigger.setAttribute('aria-expanded', 'true');
-      });
-      dd.addEventListener('focusout', function (e) {
-        if (!dd.contains(e.relatedTarget)) {
-          trigger.setAttribute('aria-expanded', 'false');
-          dd.classList.remove('dropdown-closed');
+      trigger.addEventListener('click', function (e) {
+        // Own the toggle: without preventDefault the tap would also blur/refocus
+        // and let DaisyUI's focus rules fight our explicit state.
+        e.preventDefault();
+        if (dd.classList.contains('dropdown-open')) {
+          closeDropdown(dd);
+        } else {
+          openDropdown(dd);
         }
       });
-      // Re-arm the dropdown when the trigger is activated again
-      trigger.addEventListener('click', function () {
-        dd.classList.remove('dropdown-closed');
-        trigger.setAttribute('aria-expanded', 'true');
+      // Keyboard: close once focus leaves the dropdown entirely.
+      dd.addEventListener('focusout', function (e) {
+        if (!dd.contains(e.relatedTarget)) closeDropdown(dd);
+      });
+    });
+
+    // Tap or click anywhere outside an open menu closes it.
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.dropdown')) closeAllDropdowns(null);
+    });
+
+    // Escape closes the open menu and returns focus to its trigger.
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      dropdowns.forEach(function (dd) {
+        if (!dd.classList.contains('dropdown-open')) return;
+        var trigger = dd.querySelector('[aria-haspopup]');
+        closeDropdown(dd);
+        if (trigger) trigger.focus();
       });
     });
 
@@ -1124,11 +1169,11 @@
       localStorage.setItem('theme', theme);
       setTimeout(function () { html.classList.remove('theme-transitioning'); }, 300);
       syncThemePressed(theme);
-      // Close the dropdown WITHOUT dumping keyboard focus to <body>: suppress the
-      // focus-driven open state, then return focus to the trigger.
-      themeToggleBtn.closest('.dropdown').classList.add('dropdown-closed');
+      // Close the theme menu, then return focus to the trigger. .dropdown-closed
+      // (added by closeDropdown) suppresses the focus-driven reopen.
+      var themeDropdown = themeToggleBtn.closest('.dropdown');
+      closeDropdown(themeDropdown);
       themeToggleBtn.focus();
-      themeToggleBtn.setAttribute('aria-expanded', 'false');
     }
 
     themeDark.addEventListener('click', function () {
