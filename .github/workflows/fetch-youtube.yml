@@ -158,3 +158,19 @@ jobs:
           git config --local user.name "GitHub Action"
           git add youtube.json
           git diff --quiet --staged || (git commit -m "Update YouTube data" && git pull --rebase && git push)
+
+      # Deploy directly from this workflow: the data commit above is pushed with
+      # GITHUB_TOKEN, and pushes made with that token do NOT trigger other
+      # workflows (deploy.yml never fires for it), so we deploy here ourselves.
+      - name: Build CSS and deploy to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npm ci
+          npm run build
+          mkdir -p /tmp/site
+          cp index.html youtube.json /tmp/site/
+          cp -R dist /tmp/site/dist
+          cp -R images /tmp/site/images
+          npx --yes wrangler@4 pages deploy /tmp/site --project-name bandmsgarage --branch main --commit-dirty=true
