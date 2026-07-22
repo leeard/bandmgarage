@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "-1Nc_FIMQNo",
+      "title": "Fridays video was FUN! 😂",
+      "thumbnail": "https://i.ytimg.com/vi/-1Nc_FIMQNo/hqdefault.jpg",
+      "publishedAt": "2026-07-22T03:18:19Z"
+    },
+    {
       "id": "HZdLRapOj-4",
       "title": "We are BACK BABY!!! We have recovered our YouTube channel!!!",
       "thumbnail": "https://i.ytimg.com/vi/HZdLRapOj-4/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "Episode I can make/build that with OAKER!!! 😂🛠️😎",
       "thumbnail": "https://i.ytimg.com/vi/gk1zUdpX2TM/hqdefault.jpg",
       "publishedAt": "2025-12-09T00:58:59Z"
-    },
-    {
-      "id": "Ub7zg86zZEY",
-      "title": "Sometimes that is how it goes!",
-      "thumbnail": "https://i.ytimg.com/vi/Ub7zg86zZEY/hqdefault.jpg",
-      "publishedAt": "2025-08-27T18:32:15Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "Things are 👀 UP!!!",
       "publishedAt": "2026-07-17T12:00:21Z",
       "duration": "PT36M45S",
-      "viewCount": "16257"
+      "viewCount": "16792"
     },
     {
       "id": "fvr6LxV76fg",
       "title": "Fixin’ things and saying GOODBYE 😭",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
-      "viewCount": "19882"
+      "viewCount": "19941"
     },
     {
       "id": "hhKhGPQcpyM",
       "title": "SPARKS FlY this 4th of July!",
       "publishedAt": "2026-07-03T12:00:04Z",
       "duration": "PT33M31S",
-      "viewCount": "15359"
+      "viewCount": "15384"
     },
     {
       "id": "nRSs5Ko-418",
       "title": "Huff and Puff but the Deck Still Stands!",
       "publishedAt": "2026-06-26T12:00:09Z",
       "duration": "PT39M31S",
-      "viewCount": "14909"
+      "viewCount": "14921"
     },
     {
       "id": "wh-couzBRHQ",
       "title": "Cox’s ❤️ TREES and anything wih a MOTOR!!!",
       "publishedAt": "2026-06-19T12:00:15Z",
       "duration": "PT29M34S",
-      "viewCount": "12067"
+      "viewCount": "12074"
     },
     {
       "id": "cd_jG4H6DQU",
       "title": "Mowing the lawn from the hot tub… WHAT!!!!",
       "publishedAt": "2026-06-12T12:00:12Z",
       "duration": "PT31M9S",
-      "viewCount": "12670"
+      "viewCount": "12673"
     }
   ],
   "gear": [
@@ -134,8 +134,8 @@
   ],
   "stats": {
     "subscriberCount": "69600",
-    "videoCount": "266",
-    "viewCount": "7364887",
-    "updatedAt": "2026-07-21T08:20:50Z"
+    "videoCount": "267",
+    "viewCount": "7365668",
+    "updatedAt": "2026-07-22T08:21:27Z"
   }
 }
