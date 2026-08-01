@@ -39,46 +39,46 @@
   ],
   "videos": [
     {
+      "id": "WdVTtoZOT_w",
+      "title": "SLICE it up...SOUR and SWEET!",
+      "publishedAt": "2026-07-31T12:00:35Z",
+      "duration": "PT50M33S",
+      "viewCount": "7089"
+    },
+    {
       "id": "_5bQ5kDsO_8",
       "title": "This is SHOCKING! 😮 ",
       "publishedAt": "2026-07-24T15:00:19Z",
       "duration": "PT34M21S",
-      "viewCount": "13983"
+      "viewCount": "14072"
     },
     {
       "id": "A8YSFoRmSIM",
       "title": "Things are 👀 UP!!!",
       "publishedAt": "2026-07-17T12:00:21Z",
       "duration": "PT36M45S",
-      "viewCount": "18335"
+      "viewCount": "18369"
     },
     {
       "id": "fvr6LxV76fg",
       "title": "Fixin’ things and saying GOODBYE 😭",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
-      "viewCount": "20332"
+      "viewCount": "20369"
     },
     {
       "id": "hhKhGPQcpyM",
       "title": "SPARKS FlY this 4th of July!",
       "publishedAt": "2026-07-03T12:00:04Z",
       "duration": "PT33M31S",
-      "viewCount": "15631"
+      "viewCount": "15644"
     },
     {
       "id": "nRSs5Ko-418",
       "title": "Huff and Puff but the Deck Still Stands!",
       "publishedAt": "2026-06-26T12:00:09Z",
       "duration": "PT39M31S",
-      "viewCount": "15057"
-    },
-    {
-      "id": "wh-couzBRHQ",
-      "title": "Cox’s ❤️ TREES and anything wih a MOTOR!!!",
-      "publishedAt": "2026-06-19T12:00:15Z",
-      "duration": "PT29M34S",
-      "viewCount": "12123"
+      "viewCount": "15063"
     }
   ],
   "gear": [
@@ -134,8 +134,8 @@
   ],
   "stats": {
     "subscriberCount": "69600",
-    "videoCount": "268",
-    "viewCount": "7387505",
-    "updatedAt": "2026-07-31T08:43:14Z"
+    "videoCount": "269",
+    "viewCount": "7387895",
+    "updatedAt": "2026-08-01T08:13:15Z"
   }
 }
