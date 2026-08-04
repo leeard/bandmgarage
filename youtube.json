@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "7h4NT7yxZYE",
+      "title": "Come see us at the Springville Farmers Market today! 5-9!",
+      "thumbnail": "https://i.ytimg.com/vi/7h4NT7yxZYE/hqdefault.jpg",
+      "publishedAt": "2026-08-03T19:33:26Z"
+    },
+    {
       "id": "-1Nc_FIMQNo",
       "title": "Fridays video was FUN! 😂",
       "thumbnail": "https://i.ytimg.com/vi/-1Nc_FIMQNo/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "Merry Christmas! The boys got a little present from @arccaptain_us Thank you!",
       "thumbnail": "https://i.ytimg.com/vi/nE-QXIGqXiA/hqdefault.jpg",
       "publishedAt": "2025-12-26T00:49:03Z"
-    },
-    {
-      "id": "gk1zUdpX2TM",
-      "title": "Episode I can make/build that with OAKER!!! 😂🛠️😎",
-      "thumbnail": "https://i.ytimg.com/vi/gk1zUdpX2TM/hqdefault.jpg",
-      "publishedAt": "2025-12-09T00:58:59Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "SLICE it up...SOUR and SWEET!",
       "publishedAt": "2026-07-31T12:00:35Z",
       "duration": "PT50M33S",
-      "viewCount": "9509"
+      "viewCount": "10010"
     },
     {
       "id": "_5bQ5kDsO_8",
       "title": "This is SHOCKING! 😮 ",
       "publishedAt": "2026-07-24T15:00:19Z",
       "duration": "PT34M21S",
-      "viewCount": "14186"
+      "viewCount": "14248"
     },
     {
       "id": "A8YSFoRmSIM",
       "title": "Things are 👀 UP!!!",
       "publishedAt": "2026-07-17T12:00:21Z",
       "duration": "PT36M45S",
-      "viewCount": "18417"
+      "viewCount": "18441"
     },
     {
       "id": "fvr6LxV76fg",
       "title": "Fixin’ things and saying GOODBYE 😭",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
-      "viewCount": "20412"
+      "viewCount": "20427"
     },
     {
       "id": "hhKhGPQcpyM",
       "title": "SPARKS FlY this 4th of July!",
       "publishedAt": "2026-07-03T12:00:04Z",
       "duration": "PT33M31S",
-      "viewCount": "15665"
+      "viewCount": "15678"
     },
     {
       "id": "nRSs5Ko-418",
       "title": "Huff and Puff but the Deck Still Stands!",
       "publishedAt": "2026-06-26T12:00:09Z",
       "duration": "PT39M31S",
-      "viewCount": "15079"
+      "viewCount": "15084"
     }
   ],
   "gear": [
@@ -133,9 +133,9 @@
     }
   ],
   "stats": {
-    "subscriberCount": "69600",
-    "videoCount": "269",
-    "viewCount": "7387895",
-    "updatedAt": "2026-08-03T09:35:25Z"
+    "subscriberCount": "69500",
+    "videoCount": "270",
+    "viewCount": "7398610",
+    "updatedAt": "2026-08-04T08:29:57Z"
   }
 }
