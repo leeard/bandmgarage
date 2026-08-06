@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "_Uy4AUXvRys",
+      "title": "This is the BEST work break!",
+      "thumbnail": "https://i.ytimg.com/vi/_Uy4AUXvRys/hqdefault.jpg",
+      "publishedAt": "2026-08-06T01:06:49Z"
+    },
+    {
       "id": "uOLDccN9zJw",
       "title": "Meet the new addition to the farm! SWIPUR! 🐈‍⬛",
       "thumbnail": "https://i.ytimg.com/vi/uOLDccN9zJw/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "Oaker loves his new toy! Thank you ARCCAPTAIN!!!",
       "thumbnail": "https://i.ytimg.com/vi/pe6knonx0dU/hqdefault.jpg",
       "publishedAt": "2026-01-16T06:16:01Z"
-    },
-    {
-      "id": "LP-TfGoO28E",
-      "title": "The Cox family at the BEGINNING of 2025 and END of 2025!",
-      "thumbnail": "https://i.ytimg.com/vi/LP-TfGoO28E/hqdefault.jpg",
-      "publishedAt": "2025-12-31T00:19:27Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "SLICE it up...SOUR and SWEET!",
       "publishedAt": "2026-07-31T12:00:35Z",
       "duration": "PT50M33S",
-      "viewCount": "10441"
+      "viewCount": "10602"
     },
     {
       "id": "_5bQ5kDsO_8",
       "title": "This is SHOCKING! 😮 ",
       "publishedAt": "2026-07-24T15:00:19Z",
       "duration": "PT34M21S",
-      "viewCount": "14292"
+      "viewCount": "14335"
     },
     {
       "id": "A8YSFoRmSIM",
       "title": "Things are 👀 UP!!!",
       "publishedAt": "2026-07-17T12:00:21Z",
       "duration": "PT36M45S",
-      "viewCount": "18458"
+      "viewCount": "18477"
     },
     {
       "id": "fvr6LxV76fg",
       "title": "Fixin’ things and saying GOODBYE 😭",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
-      "viewCount": "20440"
+      "viewCount": "20454"
     },
     {
       "id": "hhKhGPQcpyM",
       "title": "SPARKS FlY this 4th of July!",
       "publishedAt": "2026-07-03T12:00:04Z",
       "duration": "PT33M31S",
-      "viewCount": "15690"
+      "viewCount": "15700"
     },
     {
       "id": "nRSs5Ko-418",
       "title": "Huff and Puff but the Deck Still Stands!",
       "publishedAt": "2026-06-26T12:00:09Z",
       "duration": "PT39M31S",
-      "viewCount": "15090"
+      "viewCount": "15093"
     }
   ],
   "gear": [
@@ -134,8 +134,8 @@
   ],
   "stats": {
     "subscriberCount": "69500",
-    "videoCount": "271",
-    "viewCount": "7400373",
-    "updatedAt": "2026-08-05T08:28:43Z"
+    "videoCount": "272",
+    "viewCount": "7403347",
+    "updatedAt": "2026-08-06T06:55:20Z"
   }
 }
