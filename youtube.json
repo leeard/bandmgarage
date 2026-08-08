@@ -39,46 +39,46 @@
   ],
   "videos": [
     {
+      "id": "pgcIpVs_LgM",
+      "title": "I don’t think that’s right…🤨",
+      "publishedAt": "2026-08-07T12:00:38Z",
+      "duration": "PT50M57S",
+      "viewCount": "9244"
+    },
+    {
       "id": "WdVTtoZOT_w",
       "title": "SLICE it up...SOUR and SWEET!",
       "publishedAt": "2026-07-31T12:00:35Z",
       "duration": "PT50M33S",
-      "viewCount": "10739"
+      "viewCount": "10835"
     },
     {
       "id": "_5bQ5kDsO_8",
       "title": "This is SHOCKING! 😮 ",
       "publishedAt": "2026-07-24T15:00:19Z",
       "duration": "PT34M21S",
-      "viewCount": "14361"
+      "viewCount": "14411"
     },
     {
       "id": "A8YSFoRmSIM",
       "title": "Things are 👀 UP!!!",
       "publishedAt": "2026-07-17T12:00:21Z",
       "duration": "PT36M45S",
-      "viewCount": "18495"
+      "viewCount": "18517"
     },
     {
       "id": "fvr6LxV76fg",
       "title": "Fixin’ things and saying GOODBYE 😭",
       "publishedAt": "2026-07-10T12:00:28Z",
       "duration": "PT36M58S",
-      "viewCount": "20472"
+      "viewCount": "20518"
     },
     {
       "id": "hhKhGPQcpyM",
       "title": "SPARKS FlY this 4th of July!",
       "publishedAt": "2026-07-03T12:00:04Z",
       "duration": "PT33M31S",
-      "viewCount": "15703"
-    },
-    {
-      "id": "nRSs5Ko-418",
-      "title": "Huff and Puff but the Deck Still Stands!",
-      "publishedAt": "2026-06-26T12:00:09Z",
-      "duration": "PT39M31S",
-      "viewCount": "15096"
+      "viewCount": "15716"
     }
   ],
   "gear": [
@@ -134,8 +134,8 @@
   ],
   "stats": {
     "subscriberCount": "69500",
-    "videoCount": "273",
-    "viewCount": "7404002",
-    "updatedAt": "2026-08-07T06:25:02Z"
+    "videoCount": "274",
+    "viewCount": "7410278",
+    "updatedAt": "2026-08-08T06:15:12Z"
   }
 }
