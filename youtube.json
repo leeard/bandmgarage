@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "WmFHeBpeHRY",
+      "title": "Check out tomorrow’s video! It drops at 6 am on B&M’s Garage 2.0 YouTube Channel! Link in bio!",
+      "thumbnail": "https://i.ytimg.com/vi/WmFHeBpeHRY/hqdefault.jpg",
+      "publishedAt": "2026-08-19T02:27:32Z"
+    },
+    {
       "id": "SxUU0C9lhKU",
       "title": "We miss Oaker but don’t miss tomorrow’s video! It is a video with ONLY BEN and it is a little crazy!",
       "thumbnail": "https://i.ytimg.com/vi/SxUU0C9lhKU/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "Fridays video was FUN! 😂",
       "thumbnail": "https://i.ytimg.com/vi/-1Nc_FIMQNo/hqdefault.jpg",
       "publishedAt": "2026-07-22T03:18:19Z"
-    },
-    {
-      "id": "HZdLRapOj-4",
-      "title": "We are BACK BABY!!! We have recovered our YouTube channel!!!",
-      "thumbnail": "https://i.ytimg.com/vi/HZdLRapOj-4/hqdefault.jpg",
-      "publishedAt": "2026-05-13T00:32:05Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "ALRIGHT... Get back to work!",
       "publishedAt": "2026-08-14T12:00:24Z",
       "duration": "PT28M3S",
-      "viewCount": "10557"
+      "viewCount": "10899"
     },
     {
       "id": "gEBSoYQWYw8",
       "title": "Hang out with Cox Fam",
       "publishedAt": "2026-08-09T00:07:17Z",
       "duration": "PT34M30S",
-      "viewCount": "5140"
+      "viewCount": "5160"
     },
     {
       "id": "pgcIpVs_LgM",
       "title": "I don’t think that’s right…🤨",
       "publishedAt": "2026-08-07T12:00:38Z",
       "duration": "PT50M57S",
-      "viewCount": "15032"
+      "viewCount": "15079"
     },
     {
       "id": "WdVTtoZOT_w",
       "title": "SLICE it up...SOUR and SWEET!",
       "publishedAt": "2026-07-31T12:00:35Z",
       "duration": "PT50M33S",
-      "viewCount": "11257"
+      "viewCount": "11275"
     },
     {
       "id": "_5bQ5kDsO_8",
       "title": "This is SHOCKING! 😮 ",
       "publishedAt": "2026-07-24T15:00:19Z",
       "duration": "PT34M21S",
-      "viewCount": "14562"
+      "viewCount": "14565"
     },
     {
       "id": "A8YSFoRmSIM",
       "title": "Things are 👀 UP!!!",
       "publishedAt": "2026-07-17T12:00:21Z",
       "duration": "PT36M45S",
-      "viewCount": "18637"
+      "viewCount": "18645"
     }
   ],
   "gear": [
@@ -151,8 +151,8 @@
   ],
   "stats": {
     "subscriberCount": "69500",
-    "videoCount": "276",
-    "viewCount": "7446416",
-    "updatedAt": "2026-08-18T06:08:36Z"
+    "videoCount": "277",
+    "viewCount": "7446898",
+    "updatedAt": "2026-08-19T06:09:21Z"
   }
 }
