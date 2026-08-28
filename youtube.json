@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "5QwT52ZYrt8",
+      "title": "Make sure to watch tomorrow’s video on B&M’s Garage YouTube Channel!",
+      "thumbnail": "https://i.ytimg.com/vi/5QwT52ZYrt8/hqdefault.jpg",
+      "publishedAt": "2026-08-28T02:55:34Z"
+    },
+    {
       "id": "4EerCYzsUUI",
       "title": "Besties share glasses! 🤓😁😂Check out tomorrow’s video on B&M’s Garage! The Rizz Rig comes to life!",
       "thumbnail": "https://i.ytimg.com/vi/4EerCYzsUUI/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "Meet the new addition to the farm! SWIPUR! 🐈‍⬛",
       "thumbnail": "https://i.ytimg.com/vi/uOLDccN9zJw/hqdefault.jpg",
       "publishedAt": "2026-08-05T00:30:27Z"
-    },
-    {
-      "id": "7h4NT7yxZYE",
-      "title": "Come see us at the Springville Farmers Market today! 5-9!",
-      "thumbnail": "https://i.ytimg.com/vi/7h4NT7yxZYE/hqdefault.jpg",
-      "publishedAt": "2026-08-03T19:33:26Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "What does the Cadi-LACK?!",
       "publishedAt": "2026-08-21T12:00:31Z",
       "duration": "PT43M26S",
-      "viewCount": "11730"
+      "viewCount": "12203"
     },
     {
       "id": "yE0SBJto0ks",
       "title": "ALRIGHT... Get back to work!",
       "publishedAt": "2026-08-14T12:00:24Z",
       "duration": "PT28M3S",
-      "viewCount": "11720"
+      "viewCount": "11803"
     },
     {
       "id": "gEBSoYQWYw8",
       "title": "Hang out with Cox Fam",
       "publishedAt": "2026-08-09T00:07:17Z",
       "duration": "PT34M30S",
-      "viewCount": "5237"
+      "viewCount": "5253"
     },
     {
       "id": "pgcIpVs_LgM",
       "title": "I don’t think that’s right…🤨",
       "publishedAt": "2026-08-07T12:00:38Z",
       "duration": "PT50M57S",
-      "viewCount": "15361"
+      "viewCount": "15426"
     },
     {
       "id": "WdVTtoZOT_w",
       "title": "SLICE it up...SOUR and SWEET!",
       "publishedAt": "2026-07-31T12:00:35Z",
       "duration": "PT50M33S",
-      "viewCount": "11397"
+      "viewCount": "11414"
     },
     {
       "id": "_5bQ5kDsO_8",
       "title": "This is SHOCKING! 😮 ",
       "publishedAt": "2026-07-24T15:00:19Z",
       "duration": "PT34M21S",
-      "viewCount": "14626"
+      "viewCount": "14644"
     }
   ],
   "gear": [
@@ -144,8 +144,8 @@
   ],
   "stats": {
     "subscriberCount": "69500",
-    "videoCount": "279",
-    "viewCount": "7471513",
-    "updatedAt": "2026-08-27T09:05:48Z"
+    "videoCount": "280",
+    "viewCount": "7472177",
+    "updatedAt": "2026-08-28T09:09:54Z"
   }
 }
