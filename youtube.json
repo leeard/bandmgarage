@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "UgaWENM0l64",
+      "title": "New video tomorrow and we are going LIVE on THIS channel on 6/5 at 6pm! Check it out!",
+      "thumbnail": "https://i.ytimg.com/vi/UgaWENM0l64/hqdefault.jpg",
+      "publishedAt": "2026-09-04T02:34:46Z"
+    },
+    {
       "id": "B6VOwE4-J2E",
       "title": "Make sure to watch Wednesdays video on B&M's Garage 2.0YouTube Channel!",
       "thumbnail": "https://i.ytimg.com/vi/B6VOwE4-J2E/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "We miss Oaker but don’t miss tomorrow’s video! It is a video with ONLY BEN and it is a little crazy!",
       "thumbnail": "https://i.ytimg.com/vi/SxUU0C9lhKU/hqdefault.jpg",
       "publishedAt": "2026-08-07T00:56:42Z"
-    },
-    {
-      "id": "_Uy4AUXvRys",
-      "title": "This is the BEST work break!",
-      "thumbnail": "https://i.ytimg.com/vi/_Uy4AUXvRys/hqdefault.jpg",
-      "publishedAt": "2026-08-06T01:06:49Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "28254"
+      "viewCount": "29059"
     },
     {
       "id": "hUZRAQCmjWk",
       "title": "What does the Cadi-LACK?!",
       "publishedAt": "2026-08-21T12:00:31Z",
       "duration": "PT43M26S",
-      "viewCount": "13878"
+      "viewCount": "14081"
     },
     {
       "id": "yE0SBJto0ks",
       "title": "ALRIGHT... Get back to work!",
       "publishedAt": "2026-08-14T12:00:24Z",
       "duration": "PT28M3S",
-      "viewCount": "12110"
+      "viewCount": "12141"
     },
     {
       "id": "gEBSoYQWYw8",
       "title": "Hang out with Cox Fam",
       "publishedAt": "2026-08-09T00:07:17Z",
       "duration": "PT34M30S",
-      "viewCount": "5334"
+      "viewCount": "5347"
     },
     {
       "id": "pgcIpVs_LgM",
       "title": "I don’t think that’s right…🤨",
       "publishedAt": "2026-08-07T12:00:38Z",
       "duration": "PT50M57S",
-      "viewCount": "15645"
+      "viewCount": "15686"
     },
     {
       "id": "WdVTtoZOT_w",
       "title": "SLICE it up...SOUR and SWEET!",
       "publishedAt": "2026-07-31T12:00:35Z",
       "duration": "PT50M33S",
-      "viewCount": "11524"
+      "viewCount": "11537"
     }
   ],
   "gear": [
@@ -144,8 +144,8 @@
   ],
   "stats": {
     "subscriberCount": "69400",
-    "videoCount": "282",
+    "videoCount": "283",
     "viewCount": "7513042",
-    "updatedAt": "2026-09-03T06:15:56Z"
+    "updatedAt": "2026-09-04T06:14:50Z"
   }
 }
