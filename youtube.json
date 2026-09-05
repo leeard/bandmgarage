@@ -39,46 +39,46 @@
   ],
   "videos": [
     {
+      "id": "8FRVBmaAiD0",
+      "title": "Will the VOLVO run?!?",
+      "publishedAt": "2026-09-04T12:00:32Z",
+      "duration": "PT39M9S",
+      "viewCount": "14866"
+    },
+    {
       "id": "mSWRPZg38zo",
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "29059"
+      "viewCount": "29517"
     },
     {
       "id": "hUZRAQCmjWk",
       "title": "What does the Cadi-LACK?!",
       "publishedAt": "2026-08-21T12:00:31Z",
       "duration": "PT43M26S",
-      "viewCount": "14081"
+      "viewCount": "14259"
     },
     {
       "id": "yE0SBJto0ks",
       "title": "ALRIGHT... Get back to work!",
       "publishedAt": "2026-08-14T12:00:24Z",
       "duration": "PT28M3S",
-      "viewCount": "12141"
+      "viewCount": "12191"
     },
     {
       "id": "gEBSoYQWYw8",
       "title": "Hang out with Cox Fam",
       "publishedAt": "2026-08-09T00:07:17Z",
       "duration": "PT34M30S",
-      "viewCount": "5347"
+      "viewCount": "5358"
     },
     {
       "id": "pgcIpVs_LgM",
       "title": "I don’t think that’s right…🤨",
       "publishedAt": "2026-08-07T12:00:38Z",
       "duration": "PT50M57S",
-      "viewCount": "15686"
-    },
-    {
-      "id": "WdVTtoZOT_w",
-      "title": "SLICE it up...SOUR and SWEET!",
-      "publishedAt": "2026-07-31T12:00:35Z",
-      "duration": "PT50M33S",
-      "viewCount": "11537"
+      "viewCount": "15733"
     }
   ],
   "gear": [
@@ -144,8 +144,8 @@
   ],
   "stats": {
     "subscriberCount": "69400",
-    "videoCount": "283",
-    "viewCount": "7513042",
-    "updatedAt": "2026-09-04T06:14:50Z"
+    "videoCount": "284",
+    "viewCount": "7516257",
+    "updatedAt": "2026-09-05T06:13:29Z"
   }
 }
