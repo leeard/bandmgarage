@@ -39,46 +39,46 @@
   ],
   "videos": [
     {
+      "id": "9BMHnPD0H20",
+      "title": "Q&A with B&M's Garage!",
+      "publishedAt": "2026-09-06T00:47:11Z",
+      "duration": "PT44M11S",
+      "viewCount": "3356"
+    },
+    {
       "id": "8FRVBmaAiD0",
       "title": "Will the VOLVO run?!?",
       "publishedAt": "2026-09-04T12:00:32Z",
       "duration": "PT39M9S",
-      "viewCount": "14866"
+      "viewCount": "21799"
     },
     {
       "id": "mSWRPZg38zo",
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "29517"
+      "viewCount": "29752"
     },
     {
       "id": "hUZRAQCmjWk",
       "title": "What does the Cadi-LACK?!",
       "publishedAt": "2026-08-21T12:00:31Z",
       "duration": "PT43M26S",
-      "viewCount": "14259"
+      "viewCount": "14376"
     },
     {
       "id": "yE0SBJto0ks",
       "title": "ALRIGHT... Get back to work!",
       "publishedAt": "2026-08-14T12:00:24Z",
       "duration": "PT28M3S",
-      "viewCount": "12191"
+      "viewCount": "12231"
     },
     {
       "id": "gEBSoYQWYw8",
       "title": "Hang out with Cox Fam",
       "publishedAt": "2026-08-09T00:07:17Z",
       "duration": "PT34M30S",
-      "viewCount": "5358"
-    },
-    {
-      "id": "pgcIpVs_LgM",
-      "title": "I don’t think that’s right…🤨",
-      "publishedAt": "2026-08-07T12:00:38Z",
-      "duration": "PT50M57S",
-      "viewCount": "15733"
+      "viewCount": "5365"
     }
   ],
   "gear": [
@@ -98,54 +98,11 @@
       "link": "https://www.amazon.com/dp/B0B7LMB22Q"
     }
   ],
-  "deals": [
-    {
-      "host": "arccaptain.com",
-      "url": "https://www.arccaptain.com/?ref=B%26MsGarage",
-      "name": "ARCCAPTAIN",
-      "code": "B&MsGarage",
-      "deal": "5% OFF"
-    },
-    {
-      "host": "olightstore.com",
-      "url": "https://www.olightstore.com/s/T1TDON",
-      "name": "Olight",
-      "code": null,
-      "deal": null
-    },
-    {
-      "host": "bruntworkwear.com",
-      "url": "https://bruntworkwear.com/BANDM10",
-      "name": "Brunt",
-      "code": "BANDM10",
-      "deal": "$10 OFF"
-    },
-    {
-      "host": "hovsco.com",
-      "url": "https://www.hovsco.com/BMsGarage",
-      "name": "Hovsco",
-      "code": null,
-      "deal": "$50 OFF"
-    },
-    {
-      "host": "himiwaybike.info",
-      "url": "https://himiwaybike.info/4bMHsvC",
-      "name": "Himiway",
-      "code": "GARAGE60",
-      "deal": null
-    },
-    {
-      "host": "mowrator.com",
-      "url": "https://mowrator.com/?ref=ikfdazhz",
-      "name": "Mowrator",
-      "code": "bmgarage",
-      "deal": "10% OFF"
-    }
-  ],
+  "deals": [],
   "stats": {
     "subscriberCount": "69400",
-    "videoCount": "284",
-    "viewCount": "7516257",
-    "updatedAt": "2026-09-05T06:13:29Z"
+    "videoCount": "285",
+    "viewCount": "7517110",
+    "updatedAt": "2026-09-06T06:13:37Z"
   }
 }
