@@ -1,6 +1,18 @@
 {
   "shorts": [
     {
+      "id": "SIAmbVDRJBs",
+      "title": "WATCH tomorrow’s video! You won’t want to miss it!",
+      "thumbnail": "https://i.ytimg.com/vi/SIAmbVDRJBs/hqdefault.jpg",
+      "publishedAt": "2026-09-18T00:01:36Z"
+    },
+    {
+      "id": "UgaWENM0l64",
+      "title": "New video tomorrow and we are going LIVE on THIS channel on 6/5 at 6pm! Check it out!",
+      "thumbnail": "https://i.ytimg.com/vi/UgaWENM0l64/hqdefault.jpg",
+      "publishedAt": "2026-09-04T02:34:46Z"
+    },
+    {
       "id": "B6VOwE4-J2E",
       "title": "Make sure to watch Wednesdays video on B&M's Garage 2.0YouTube Channel!",
       "thumbnail": "https://i.ytimg.com/vi/B6VOwE4-J2E/hqdefault.jpg",
@@ -23,18 +35,6 @@
       "title": "Check out tomorrow’s video! It drops at 6 am on B&M’s Garage 2.0 YouTube Channel! Link in bio!",
       "thumbnail": "https://i.ytimg.com/vi/WmFHeBpeHRY/hqdefault.jpg",
       "publishedAt": "2026-08-19T02:27:32Z"
-    },
-    {
-      "id": "SxUU0C9lhKU",
-      "title": "We miss Oaker but don’t miss tomorrow’s video! It is a video with ONLY BEN and it is a little crazy!",
-      "thumbnail": "https://i.ytimg.com/vi/SxUU0C9lhKU/hqdefault.jpg",
-      "publishedAt": "2026-08-07T00:56:42Z"
-    },
-    {
-      "id": "_Uy4AUXvRys",
-      "title": "This is the BEST work break!",
-      "thumbnail": "https://i.ytimg.com/vi/_Uy4AUXvRys/hqdefault.jpg",
-      "publishedAt": "2026-08-06T01:06:49Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "Ben FUELS his RIDE!",
       "publishedAt": "2026-09-11T12:00:39Z",
       "duration": "PT38M54S",
-      "viewCount": "16947"
+      "viewCount": "17421"
     },
     {
       "id": "9BMHnPD0H20",
       "title": "Q&A with B&M's Garage!",
       "publishedAt": "2026-09-06T00:47:11Z",
       "duration": "PT44M11S",
-      "viewCount": "9128"
+      "viewCount": "9185"
     },
     {
       "id": "8FRVBmaAiD0",
       "title": "Will the VOLVO run?!?",
       "publishedAt": "2026-09-04T12:00:32Z",
       "duration": "PT39M9S",
-      "viewCount": "28408"
+      "viewCount": "28515"
     },
     {
       "id": "mSWRPZg38zo",
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "30468"
+      "viewCount": "30518"
     },
     {
       "id": "hUZRAQCmjWk",
       "title": "What does the Cadi-LACK?!",
       "publishedAt": "2026-08-21T12:00:31Z",
       "duration": "PT43M26S",
-      "viewCount": "15253"
+      "viewCount": "15328"
     },
     {
       "id": "yE0SBJto0ks",
       "title": "ALRIGHT... Get back to work!",
       "publishedAt": "2026-08-14T12:00:24Z",
       "duration": "PT28M3S",
-      "viewCount": "12434"
+      "viewCount": "12444"
     }
   ],
   "gear": [
@@ -151,8 +151,8 @@
   ],
   "stats": {
     "subscriberCount": "69300",
-    "videoCount": "286",
-    "viewCount": "7580157",
-    "updatedAt": "2026-09-17T06:15:54Z"
+    "videoCount": "287",
+    "viewCount": "7581355",
+    "updatedAt": "2026-09-18T06:15:03Z"
   }
 }
