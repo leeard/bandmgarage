@@ -39,46 +39,46 @@
   ],
   "videos": [
     {
+      "id": "WDt0-cW3zV0",
+      "title": "Work with Ben in the Shop!",
+      "publishedAt": "2026-09-18T12:00:35Z",
+      "duration": "PT32M28S",
+      "viewCount": "13926"
+    },
+    {
       "id": "v05scNMgs5c",
       "title": "Ben FUELS his RIDE!",
       "publishedAt": "2026-09-11T12:00:39Z",
       "duration": "PT38M54S",
-      "viewCount": "17421"
+      "viewCount": "17751"
     },
     {
       "id": "9BMHnPD0H20",
       "title": "Q&A with B&M's Garage!",
       "publishedAt": "2026-09-06T00:47:11Z",
       "duration": "PT44M11S",
-      "viewCount": "9185"
+      "viewCount": "9263"
     },
     {
       "id": "8FRVBmaAiD0",
       "title": "Will the VOLVO run?!?",
       "publishedAt": "2026-09-04T12:00:32Z",
       "duration": "PT39M9S",
-      "viewCount": "28515"
+      "viewCount": "28606"
     },
     {
       "id": "mSWRPZg38zo",
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "30518"
+      "viewCount": "30573"
     },
     {
       "id": "hUZRAQCmjWk",
       "title": "What does the Cadi-LACK?!",
       "publishedAt": "2026-08-21T12:00:31Z",
       "duration": "PT43M26S",
-      "viewCount": "15328"
-    },
-    {
-      "id": "yE0SBJto0ks",
-      "title": "ALRIGHT... Get back to work!",
-      "publishedAt": "2026-08-14T12:00:24Z",
-      "duration": "PT28M3S",
-      "viewCount": "12444"
+      "viewCount": "15451"
     }
   ],
   "gear": [
@@ -140,19 +140,12 @@
       "name": "Mowrator",
       "code": "bmgarage",
       "deal": "10% OFF"
-    },
-    {
-      "host": "ceenr.com",
-      "url": "https://ceenr.com/?srsltid=AfmBOopJdWrM3WiDluEZM4MiOWqbdpZR7etofEh_9O8FvohlsYbnflqu",
-      "name": "CEENR BATTERY",
-      "code": null,
-      "deal": null
     }
   ],
   "stats": {
     "subscriberCount": "69300",
-    "videoCount": "287",
-    "viewCount": "7581355",
-    "updatedAt": "2026-09-18T06:15:03Z"
+    "videoCount": "288",
+    "viewCount": "7592070",
+    "updatedAt": "2026-09-19T06:14:04Z"
   }
 }
