@@ -39,49 +39,54 @@
   ],
   "videos": [
     {
+      "id": "u59c15o0Q7c",
+      "title": "Ben ❤️ Volvos!",
+      "publishedAt": "2026-09-25T12:00:31Z",
+      "duration": "PT24M24S",
+      "viewCount": "9812"
+    },
+    {
       "id": "WDt0-cW3zV0",
       "title": "Work with Ben in the Shop!",
       "publishedAt": "2026-09-18T12:00:35Z",
       "duration": "PT32M28S",
-      "viewCount": "22673"
+      "viewCount": "23092"
     },
     {
       "id": "v05scNMgs5c",
       "title": "Ben FUELS his RIDE!",
       "publishedAt": "2026-09-11T12:00:39Z",
       "duration": "PT38M54S",
-      "viewCount": "18275"
+      "viewCount": "18389"
     },
     {
       "id": "9BMHnPD0H20",
       "title": "Q&A with B&M's Garage!",
       "publishedAt": "2026-09-06T00:47:11Z",
       "duration": "PT44M11S",
-      "viewCount": "9379"
+      "viewCount": "9395"
     },
     {
       "id": "8FRVBmaAiD0",
       "title": "Will the VOLVO run?!?",
       "publishedAt": "2026-09-04T12:00:32Z",
       "duration": "PT39M9S",
-      "viewCount": "28751"
+      "viewCount": "28854"
     },
     {
       "id": "mSWRPZg38zo",
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "30694"
-    },
-    {
-      "id": "hUZRAQCmjWk",
-      "title": "What does the Cadi-LACK?!",
-      "publishedAt": "2026-08-21T12:00:31Z",
-      "duration": "PT43M26S",
-      "viewCount": "15647"
+      "viewCount": "30709"
     }
   ],
   "gear": [
+    {
+      "id": "u59c15o0Q7c",
+      "title": "Ben ❤️ Volvos!",
+      "link": "https://amzn.to/46vpFIK"
+    },
     {
       "id": "yE0SBJto0ks",
       "title": "ALRIGHT... Get back to work!",
@@ -99,6 +104,13 @@
     }
   ],
   "deals": [
+    {
+      "host": "olight.com",
+      "url": "https://www.olight.com/s/LNC4E",
+      "name": "Olight Light",
+      "code": "AMZPLXGL10",
+      "deal": null
+    },
     {
       "host": "arccaptain.com",
       "url": "https://www.arccaptain.com/?ref=B%26MsGarage",
@@ -144,8 +156,8 @@
   ],
   "stats": {
     "subscriberCount": "69300",
-    "videoCount": "288",
-    "viewCount": "7608990",
-    "updatedAt": "2026-09-25T06:16:05Z"
+    "videoCount": "289",
+    "viewCount": "7610017",
+    "updatedAt": "2026-09-26T06:14:21Z"
   }
 }
