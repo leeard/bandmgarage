@@ -1,6 +1,12 @@
 {
   "shorts": [
     {
+      "id": "TkMCcoYlidw",
+      "title": "Make sure to watch Fridays video! We celebrate Ben’s and Murrie’s Bday!",
+      "thumbnail": "https://i.ytimg.com/vi/TkMCcoYlidw/hqdefault.jpg",
+      "publishedAt": "2026-10-02T05:25:59Z"
+    },
+    {
       "id": "SIAmbVDRJBs",
       "title": "WATCH tomorrow’s video! You won’t want to miss it!",
       "thumbnail": "https://i.ytimg.com/vi/SIAmbVDRJBs/hqdefault.jpg",
@@ -29,12 +35,6 @@
       "title": "Besties share glasses! 🤓😁😂Check out tomorrow’s video on B&M’s Garage! The Rizz Rig comes to life!",
       "thumbnail": "https://i.ytimg.com/vi/4EerCYzsUUI/hqdefault.jpg",
       "publishedAt": "2026-08-20T23:33:57Z"
-    },
-    {
-      "id": "WmFHeBpeHRY",
-      "title": "Check out tomorrow’s video! It drops at 6 am on B&M’s Garage 2.0 YouTube Channel! Link in bio!",
-      "thumbnail": "https://i.ytimg.com/vi/WmFHeBpeHRY/hqdefault.jpg",
-      "publishedAt": "2026-08-19T02:27:32Z"
     }
   ],
   "videos": [
@@ -43,42 +43,42 @@
       "title": "Ben ❤️ Volvos!",
       "publishedAt": "2026-09-25T12:00:31Z",
       "duration": "PT24M24S",
-      "viewCount": "16357"
+      "viewCount": "16641"
     },
     {
       "id": "WDt0-cW3zV0",
       "title": "Work with Ben in the Shop!",
       "publishedAt": "2026-09-18T12:00:35Z",
       "duration": "PT32M28S",
-      "viewCount": "23657"
+      "viewCount": "23734"
     },
     {
       "id": "v05scNMgs5c",
       "title": "Ben FUELS his RIDE!",
       "publishedAt": "2026-09-11T12:00:39Z",
       "duration": "PT38M54S",
-      "viewCount": "18566"
+      "viewCount": "18595"
     },
     {
       "id": "9BMHnPD0H20",
       "title": "Q&A with B&M's Garage!",
       "publishedAt": "2026-09-06T00:47:11Z",
       "duration": "PT44M11S",
-      "viewCount": "9451"
+      "viewCount": "9466"
     },
     {
       "id": "8FRVBmaAiD0",
       "title": "Will the VOLVO run?!?",
       "publishedAt": "2026-09-04T12:00:32Z",
       "duration": "PT39M9S",
-      "viewCount": "28986"
+      "viewCount": "29016"
     },
     {
       "id": "mSWRPZg38zo",
       "title": "SLIDER in the HOE!",
       "publishedAt": "2026-08-28T12:00:13Z",
       "duration": "PT22M57S",
-      "viewCount": "30758"
+      "viewCount": "30768"
     }
   ],
   "gear": [
@@ -156,8 +156,8 @@
   ],
   "stats": {
     "subscriberCount": "69300",
-    "videoCount": "289",
-    "viewCount": "7628846",
-    "updatedAt": "2026-10-01T06:16:47Z"
+    "videoCount": "290",
+    "viewCount": "7629151",
+    "updatedAt": "2026-10-02T06:16:03Z"
   }
 }
