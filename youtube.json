@@ -39,46 +39,46 @@
   ],
   "videos": [
     {
+      "id": "bddKIYpmQ7Q",
+      "title": "Let's get some things started...maybe!",
+      "publishedAt": "2026-10-23T12:00:08Z",
+      "duration": "PT20M3S",
+      "viewCount": "9880"
+    },
+    {
       "id": "KVN0oQOP_88",
       "title": "Well...That's Something",
       "publishedAt": "2026-10-16T12:00:14Z",
       "duration": "PT22M32S",
-      "viewCount": "24099"
+      "viewCount": "24511"
     },
     {
       "id": "LRqC04hh8uw",
       "title": "Ben and his projects!",
       "publishedAt": "2026-10-09T12:00:36Z",
       "duration": "PT32M21S",
-      "viewCount": "17986"
+      "viewCount": "18128"
     },
     {
       "id": "EqmHnagF478",
       "title": "The Cox Crew is LIVE!!!",
       "publishedAt": "2026-10-04T14:43:47Z",
       "duration": "PT39M46S",
-      "viewCount": "6344"
+      "viewCount": "6355"
     },
     {
       "id": "L8MobY61fPo",
       "title": "Happy Birthday to BEN and MURRIE!",
       "publishedAt": "2026-10-02T12:00:19Z",
       "duration": "PT30M24S",
-      "viewCount": "12873"
+      "viewCount": "12891"
     },
     {
       "id": "u59c15o0Q7c",
       "title": "Ben ❤️ Volvos!",
       "publishedAt": "2026-09-25T12:00:31Z",
       "duration": "PT24M24S",
-      "viewCount": "17359"
-    },
-    {
-      "id": "WDt0-cW3zV0",
-      "title": "Work with Ben in the Shop!",
-      "publishedAt": "2026-09-18T12:00:35Z",
-      "duration": "PT32M28S",
-      "viewCount": "24760"
+      "viewCount": "17372"
     }
   ],
   "gear": [
@@ -103,61 +103,11 @@
       "link": "https://www.amazon.com/dp/B0B7LMB22Q"
     }
   ],
-  "deals": [
-    {
-      "host": "arccaptain.com",
-      "url": "https://www.arccaptain.com/?ref=B%26MsGarage",
-      "name": "ARCCAPTAIN",
-      "code": "B&MsGarage",
-      "deal": "5% OFF"
-    },
-    {
-      "host": "olightstore.com",
-      "url": "https://www.olightstore.com/s/T1TDON",
-      "name": "Olight",
-      "code": null,
-      "deal": null
-    },
-    {
-      "host": "bruntworkwear.com",
-      "url": "https://bruntworkwear.com/BANDM10",
-      "name": "Brunt",
-      "code": "BANDM10",
-      "deal": "$10 OFF"
-    },
-    {
-      "host": "hovsco.com",
-      "url": "https://www.hovsco.com/BMsGarage",
-      "name": "Hovsco",
-      "code": null,
-      "deal": "$50 OFF"
-    },
-    {
-      "host": "himiwaybike.info",
-      "url": "https://himiwaybike.info/4bMHsvC",
-      "name": "Himiway",
-      "code": "GARAGE60",
-      "deal": null
-    },
-    {
-      "host": "mowrator.com",
-      "url": "https://mowrator.com/?ref=ikfdazhz",
-      "name": "Mowrator",
-      "code": "bmgarage",
-      "deal": "10% OFF"
-    },
-    {
-      "host": "planetsafelubricants.com",
-      "url": "https://PlanetSafeLubricants.com",
-      "name": "Planet Safe Lubricants",
-      "code": null,
-      "deal": null
-    }
-  ],
+  "deals": [],
   "stats": {
     "subscriberCount": "69100",
-    "videoCount": "295",
-    "viewCount": "7702832",
-    "updatedAt": "2026-10-23T06:15:11Z"
+    "videoCount": "296",
+    "viewCount": "7710562",
+    "updatedAt": "2026-10-24T06:13:31Z"
   }
 }
